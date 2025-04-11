@@ -1,0 +1,1438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<batchresult xsi:noNamespaceSchemaLocation="http://schemas.mandiant.com/2012/05/BatchResult.xsd" itemSchemaLocation="http://schemas.mandiant.com/2012/05/batchresult.xsd" cancelHref="/{31253421-5B4C-4326-B59D-EC6B2232E080}" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<processor xsi:type="AgentManagerInfo" name="MANDIANT Intelligent Response Agent " version="2.2.1500">
+		<issues generator="issues" generatorVersion="1.0" itemSchemaLocation="http://www.mandiant.com/schemas/issue.xsd" href="/01659E87-506B-44FE-8B1C-EC89066CF75C" />
+		<moduledefs>
+			<moduledef title="Dissolve">
+				<usage>Dissolves the Agent from the host computer.</usage>
+				<module name="dissolve" version="1.4.29.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema-type="xsd">
+						<defName>dissolve</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="immediate" type="Boolean" required="false" repeatable="false" usage="Execute the command immediately without waiting for existing audits to finish.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Deactivate Agent">
+				<usage>
+					Deactivates the running agent without uninstalling it.
+					No further audits will be possible until the agent is
+					started again.
+				</usage>
+				<module name="deactivate" version="1.4.29.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema-type="xsd">
+						<defName>deactivate</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="immediate" type="Boolean" required="false" repeatable="false" usage="Execute the command immediately without waiting for existing audits to finish.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Restart Agent">
+				<usage>Restarts the agent service.</usage>
+				<module name="restart" version="1.4.29.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema-type="xsd">
+						<defName>restart</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="immediate" type="Boolean" required="false" repeatable="false" usage="Execute the command immediately without waiting for existing audits to finish.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="User Accounts">
+				<module name="w32useraccounts" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/useritem.xsd" schema-type="xsd">
+						<defName>w32useraccounts</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Task Listing">
+				<usage>
+					List of Scheduled tasks (created via the 'at'
+					command or Task Scheduler)
+				</usage>
+				<module name="w32tasks" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/taskitem.xsd" schema-type="xsd">
+						<defName>w32tasks</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Verify the digital signature on executable files">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="raw mode" type="Boolean" required="false" repeatable="false" usage="Open files for hashing in raw mode.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="System Information">
+				<usage>
+					General system information such as network devices,
+					registration information, and local time.
+				</usage>
+				<module name="w32system" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/systeminfoitem.xsd" schema-type="xsd">
+						<defName>w32system</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Services Listing">
+				<module name="w32services" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/serviceitem.xsd" schema-type="xsd">
+						<defName>w32services</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Verify the digital signature on executable files">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="raw mode" type="Boolean" required="false" repeatable="false" usage="Open files for hashing in raw mode.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Network Ports Listing">
+				<warning>Running two ports audits simultaneously may cause both to fail.</warning>
+				<usage>
+					Active and listening ports and, where available, the
+					process associated with them.
+				</usage>
+				<module name="w32ports" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/portitem.xsd" schema-type="xsd">
+						<defName>w32ports</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Process Listing (API Mode)">
+				<usage>
+					Lists running processes as reported by the operating
+					system.
+				</usage>
+				<module name="w32processes-API" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/processitem.xsd" schema-type="xsd">
+						<defName>w32processes-API</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Process Listing (Handles Mode)">
+				<module name="w32processes-handle" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/processitem.xsd" schema-type="xsd">
+						<defName>w32processes-handle</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Event Logs">
+				<usage>
+					Acquire complete listings of the operating system event logs.
+					Enumerates and acquires all logs if none are specified.
+				</usage>
+				<module name="w32eventlogs" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/eventlogitem.xsd" schema-type="xsd">
+						<defName>w32eventlogs</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="eventlog" type="String" required="false" repeatable="true" usage="The eventlog(s) in which to parse (e.g. Application&amp;#xA;System&amp;#xA;Security)" />
+					<paramdef name="eventlogfullpath" type="String" required="false" repeatable="true" usage="The full path and filename to the eventlog(s) to parse" />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Registry Listing (API Mode)">
+				<usage>Returns a listing of registry keys using standard API methods</usage>
+				<module name="w32registryapi" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/registryitem.xsd" schema-type="xsd">
+						<defName>w32registryapi</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="false" repeatable="false" usage="Top-level Registry key to walk from.  Path if specified must include the hive name (such as HKLM)." />
+					<paramdef name="Path Regex" type="String" required="false" repeatable="false" usage="Specifies the Perl Compatible Regular Expression a key or value name must match to be returned.&amp;#xA;Examples:&amp;#xA;Match any key or value in any sub-key of the root: .*&amp;#xA;Match any key or value named Run in any sub-key: .*\\Run&amp;#xA;Match any key or value in a sub-key of Services: .*\\Services\\.*&amp;#xA;   (note that backslashes must be escaped)." />
+					<paramdef name="Value Regex" type="String" required="false" repeatable="false" usage="Return results only for values that contain data matching a Perl Compatible regular expression,&amp;#xA;such as &quot;svchost(\d\d)?\.exe&quot;.&amp;#xA;Note that REG_SZ values are automatically converted from UTF16 to UTF8 for comparison,&amp;#xA;all other values are compared &quot;as-is&quot;." />
+					<paramdef name="Type" type="String" required="false" repeatable="false" usage="Control whether keys and values are returned.  Valid values for type are &quot;KeysOnly&quot;, &quot;ValuesOnly&quot;, or &quot;All&quot;. Default is &quot;All&quot;." />
+					<paramdef name="Depth" type="Int32" required="false" repeatable="false" usage="Specifies the number of levels to recurse in the tree of keys rooted at root_key.  Use -1 to recurse the entire tree.  Starting depth is not relative to the hive." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Registry Listing (Raw Mode)">
+				<usage>Returns a listing of registry keys using Raw methods which may bypass security and access restrictions.</usage>
+				<module name="w32registryraw" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/registryitem.xsd" schema-type="xsd">
+						<defName>w32registryraw</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="false" repeatable="false" usage="Top-level Registry key to walk from.  Path if specified must include the hive name (such as HKLM)." />
+					<paramdef name="Path Regex" type="String" required="false" repeatable="false" usage="Specifies the Perl Compatible Regular Expression a key or value name must match to be returned.&amp;#xA;Examples:&amp;#xA;Match any key or value in any sub-key of the root: .*&amp;#xA;Match any key or value named Run in any sub-key: .*\\Run&amp;#xA;Match any key or value in a sub-key of Services: .*\\Services\\.*&amp;#xA;   (note that backslashes must be escaped)." />
+					<paramdef name="Value Regex" type="String" required="false" repeatable="false" usage="Return results only for values that contain data matching a Perl Compatible regular expression,&amp;#xA;such as &quot;svchost(\d\d)?\.exe&quot;.&amp;#xA;Note that REG_SZ values are automatically converted from UTF16 to UTF8 for comparison,&amp;#xA;all other values are compared &quot;as-is&quot;." />
+					<paramdef name="Type" type="String" required="false" repeatable="false" usage="Control whether keys and values are returned.  Valid values for type are &quot;KeysOnly&quot;, &quot;ValuesOnly&quot;, or &quot;All&quot;. Default is &quot;All&quot;." />
+					<paramdef name="Depth" type="Int32" required="false" repeatable="false" usage="Specifies the number of levels to recurse in the tree of keys rooted at root_key.  Use -1 to recurse the entire tree.  Starting depth is relative to the hive (eg, \HKLM\SOFTWARE)." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Registry Hive Listing">
+				<usage>Lists registry hives for use in a Registry Listing audit. Includes hives which can only be acquired in Raw mode (such as the SAM hive).</usage>
+				<module name="w32hivelist" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/registryhiveitem.xsd" schema-type="xsd">
+						<defName>w32hivelist</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="File Listing (API Mode)">
+				<warning>May return more information than expected if 'Get Resources' is selected, it is strongly recommended to only use this parameter when targetting a single file.</warning>
+				<module name="w32apifiles" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/fileitem.xsd" schema-type="xsd">
+						<defName>w32apifiles</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="Path where search starts. The trailing back-slash is optional.&amp;#xA;Examples: &amp;#xA;C:\&amp;#xA;D:\WINDOWS\" />
+					<paramdef title="Path Regex" name="Regex" type="String" required="false" repeatable="false" usage="Specifies the Perl Compatible Regular Expression a file must match to be returned.&amp;#xA;You must use standard Regular Expression escaping ( '\\' matches a single '\', '\.' matches '.' )&amp;#xA;&amp;#xA;Examples:&amp;#xA;Match all files in any subdirectory: .*&amp;#xA;Match .xls files in any subdirectory: .*\.xls&amp;#xA;Match .xls files in a subdirectory named Temp: .*\\Temp\\.*\.xls&amp;#xA;" />
+					<paramdef name="Depth" type="Int32" required="false" repeatable="false" usage="Number of directory levels to include, with -1 representing full depth" />
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Analyze Entropy" type="Boolean" required="false" repeatable="false" usage="Calculate entropy for executable files. High entropy may indicate a packed executable.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Enumerate Imports" type="Boolean" required="false" repeatable="false" usage="Identify modules and functions imported by executable files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Enumerate Exports" type="Boolean" required="false" repeatable="false" usage="Identify modules and functions exported by executable files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Analyze File Anomalies" type="Boolean" required="false" repeatable="false" usage="Detect higher-order anomalies which may indicate malicious files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Scan Entry Point Distance" type="Int32" required="false" repeatable="false" usage="Specifies the number of bytes from the entry point to scan for jumps." />
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Verify the digital signature on executable files">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Minimum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The minimum file size (in bytes) of a returned file." />
+					<paramdef name="Maximum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The maximum file size (in bytes) of a returned file." />
+					<paramdef name="Filter MD5" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific MD5 hash" />
+					<paramdef name="Filter SHA1" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA1 hash" />
+					<paramdef name="Filter SHA256" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA256 hash" />
+					<paramdef name="Content Regex" type="ArrayOfString" required="false" repeatable="false" usage="Search files for particular content." />
+					<paramdef name="AND Operator" type="Boolean" required="false" repeatable="false" usage="A file's content must match all regex parameters.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Strings" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse specified files for strings. If strings is enabled, default string length is 4.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="shortest matched string" type="Int32" required="false" repeatable="false" usage="Minimum Recognized String Length. Default: 4" />
+					<paramdef name="Include Files" type="Boolean" required="false" repeatable="false" usage="Return file item types.">
+						<defaultValue xsi:type="xs:boolean">true</defaultValue>
+					</paramdef>
+					<paramdef name="Include Directories" type="Boolean" required="false" repeatable="false" usage="Return directory item types.">
+						<defaultValue xsi:type="xs:boolean">true</defaultValue>
+					</paramdef>
+					<paramdef name="Get Resources" type="Boolean" required="false" repeatable="false" usage="Return resources stored in a PE file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Get Resource Data" type="Boolean" required="false" repeatable="false" usage="Return all data associated with all resources in a PE file.  WARNING: This option can return very large amounts of data even with narrowly-scoped audits.  Consider using &quot;Exclude Resource Types&quot; and verifying the size of the results from a single host before running on multiple hosts.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Get Version Info" type="Boolean" required="false" repeatable="false" usage="Return version information stored in a PE file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Exclude Resource Types" type="ArrayOfString" required="false" repeatable="false" usage="List of resource types to exclude when extracting PE resources." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Acquire a File (API Mode)">
+				<module name="w32apifile-acquisition" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/fileacquisitionitem.xsd" schema-type="xsd">
+						<defName>w32apifile-acquisition</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="The absolute path of the directory containing the file to acquire.  The trailing back-slash is optional.&amp;#xA;Example:&amp;#xA;C:\WINDOWS\" />
+					<paramdef name="Filename" type="String" required="true" repeatable="false" usage="The name of the file to acquire.&amp;#xA;Example: notepad.exe&amp;#xA;" />
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="File Listing (Raw Mode)">
+				<warning>May return more information than expected if 'Get Resources' is selected, it is strongly recommended to only use this parameter when targetting a single file.</warning>
+				<module name="w32rawfiles" version="1.4.37.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/fileitem.xsd" schema-type="xsd">
+						<defName>w32rawfiles</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="Path where search starts. The trailing back-slash is optional.&amp;#xA;Examples: &amp;#xA;C:\&amp;#xA;D:\WINDOWS\" />
+					<paramdef title="Path Regex" name="Regex" type="String" required="false" repeatable="false" usage="Specifies the Perl Compatible Regular Expression a file must match to be returned.&amp;#xA;You must use standard Regular Expression escaping ( '\\' matches a single '\', '\.' matches '.' )&amp;#xA;&amp;#xA;Examples:&amp;#xA;Match all files in any subdirectory: .*&amp;#xA;Match .xls files in any subdirectory: .*\.xls&amp;#xA;Match .xls files in a subdirectory named Temp: .*\\Temp\\.*\.xls&amp;#xA;" />
+					<paramdef name="Depth" type="Int32" required="false" repeatable="false" usage="Number of directory levels to include, with -1 representing full depth" />
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Analyze Entropy" type="Boolean" required="false" repeatable="false" usage="Calculate entropy for executable files. High entropy may indicate a packed executable.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Enumerate Imports" type="Boolean" required="false" repeatable="false" usage="Identify modules and functions imported by executable files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Enumerate Exports" type="Boolean" required="false" repeatable="false" usage="Identify modules and functions exported by executable files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Analyze File Anomalies" type="Boolean" required="false" repeatable="false" usage="Detect higher-order anomalies which may indicate malicious files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Scan Entry Point Distance" type="Int32" required="false" repeatable="false" usage="Specifies the number of bytes from the entry point to scan for jumps." />
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Verify the digital signature on executable files">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Minimum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The minimum file size (in bytes) of a returned file." />
+					<paramdef name="Maximum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The maximum file size (in bytes) of a returned file." />
+					<paramdef name="Active Files" type="Boolean" required="false" repeatable="false" usage="Enumerate the active files.&amp;#xA;Active means non-deleted files.">
+						<defaultValue xsi:type="xs:boolean">true</defaultValue>
+					</paramdef>
+					<paramdef name="Deleted Files" type="Boolean" required="false" repeatable="false" usage="Enumerate the deleted files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Parse NTFS INDX Buffers" type="Boolean" required="false" repeatable="false" usage="Parse unused space in NTFS INDX buffers to find previous directory entries.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter MD5" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific MD5 hash" />
+					<paramdef name="Filter SHA1" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA1 hash" />
+					<paramdef name="Filter SHA256" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA256 hash" />
+					<paramdef name="Content Regex" type="ArrayOfString" required="false" repeatable="false" usage="Search files for particular content." />
+					<paramdef name="AND Operator" type="Boolean" required="false" repeatable="false" usage="A file's content must match all regex parameters.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Strings" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse specified files for strings. If strings is enabled, default string length is 4.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="shortest matched string" type="Int32" required="false" repeatable="false" usage="Minimum Recognized String Length. Default: 4" />
+					<paramdef name="Include Files" type="Boolean" required="false" repeatable="false" usage="Return file item types.">
+						<defaultValue xsi:type="xs:boolean">true</defaultValue>
+					</paramdef>
+					<paramdef name="Include Directories" type="Boolean" required="false" repeatable="false" usage="Return directory item types.">
+						<defaultValue xsi:type="xs:boolean">true</defaultValue>
+					</paramdef>
+					<paramdef name="Get Resources" type="Boolean" required="false" repeatable="false" usage="Return resources stored in a PE file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Get Version Info" type="Boolean" required="false" repeatable="false" usage="Return version information stored in a PE file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Get Resource Data" type="Boolean" required="false" repeatable="false" usage="Return all data associated with all resources in a PE file.  WARNING: This option can return very large amounts of data even with narrowly-scoped audits.  Consider using &quot;Exclude Resource Types&quot; and verifying the size of the results from a single host before running on multiple hosts.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Exclude Resource Types" type="ArrayOfString" required="false" repeatable="false" usage="List of resource types to exclude when extracting PE resources." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Acquire a File (Raw Mode)">
+				<warning>Returns only the first match of a deleted file if INode is not specified.</warning>
+				<usage>
+					Acquires and downloads a specific file using a method
+					that may bypass security or access restrictions and retrieve
+					deleted files
+				</usage>
+				<module name="w32rawfile-acquisition" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/fileacquisitionitem.xsd" schema-type="xsd">
+						<defName>w32rawfile-acquisition</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="The absolute path of the directory containing the file to acquire.&amp;#xA;Example:&amp;#xA;D:\&amp;#xA;C:\WINDOWS\" />
+					<paramdef name="Filename" type="String" required="true" repeatable="false" usage="The name of the file to acquire.&amp;#xA;Example: notepad.exe:malware.ads&amp;#xA;" />
+					<paramdef name="Inode" type="UInt64" required="false" repeatable="false" usage="The Inode of the file to return.&amp;#xA;Note: if the inode is not specified&amp;#xA; and deleted is set to true,&amp;#xA; the first file encountered is returned." />
+					<paramdef name="Deleted" type="Boolean" required="false" repeatable="false" usage="Acquire deleted files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Volume Listing">
+				<usage>List volumes which may be mounted by physical disks.</usage>
+				<module name="w32volumes" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/volumeitem.xsd" schema-type="xsd">
+						<defName>w32volumes</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Disk Listing">
+				<usage>
+					List of physical devices which may be acquired as
+					a Disk Image
+				</usage>
+				<module name="w32disks" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/diskitem.xsd" schema-type="xsd">
+						<defName>w32disks</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Acquire Disk Image">
+				<module name="w32disk-acquisition" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/diskacquisitionitem.xsd" schema-type="xsd">
+						<defName>w32disk-acquisition</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="The global path of the symbolic link for the disk or volume to acquire. The trailing back-slash is optional.&amp;#xA;Example: \\.\&amp;#xA;" />
+					<paramdef name="Filename" type="String" required="true" repeatable="false" usage="The name of the file to acquire.&amp;#xA;Example: PhysicalDrive0" />
+					<paramdef name="offset" type="UInt64" required="false" repeatable="false" usage="Specifies the offset in bytes from the beginning of the disk." />
+					<paramdef name="size" type="UInt64" required="false" repeatable="false" usage="Specifies the size to acquire in bytes." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Acquire Multiple Files (Raw Mode)">
+				<module name="w32multifileraw-acquisition" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/fileacquisitionitem.xsd" schema-type="xsd">
+						<defName>w32multifileraw-acquisition</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="Path where search starts. The trailing back-slash is optional.&amp;#xA;Examples: &amp;#xA;C:\&amp;#xA;D:\WINDOWS\" />
+					<paramdef title="Path Regex" name="Regex" type="String" required="false" repeatable="false" usage="Specifies the Perl Compatible Regular Expression a file must match to be returned.&amp;#xA;You must use standard Regular Expression escaping ( '\\' matches a single '\', '\.' matches '.' )&amp;#xA;&amp;#xA;Examples:&amp;#xA;Match all files in any subdirectory: .*&amp;#xA;Match .xls files in any subdirectory: .*\.xls&amp;#xA;Match .xls files in a subdirectory named Temp: .*\\Temp\\.*\.xls&amp;#xA;" />
+					<paramdef name="Depth" type="Int32" required="false" repeatable="false" usage="Number of directory levels to include, with -1 representing full depth" />
+					<paramdef name="Minimum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The minimum file size (in bytes) of a returned file." />
+					<paramdef name="Maximum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The maximum file size (in bytes) of a returned file." />
+					<paramdef name="Active Files" type="Boolean" required="false" repeatable="false" usage="Enumerate the active files.&amp;#xA;Active means non-deleted files.">
+						<defaultValue xsi:type="xs:boolean">true</defaultValue>
+					</paramdef>
+					<paramdef name="Deleted Files" type="Boolean" required="false" repeatable="false" usage="Enumerate the deleted files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter MD5" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific MD5 hash" />
+					<paramdef name="Filter SHA1" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA1 hash" />
+					<paramdef name="Filter SHA256" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA256 hash" />
+					<paramdef name="Content Regex" type="ArrayOfString" required="false" repeatable="false" usage="Search files for particular content." />
+					<paramdef name="AND Operator" type="Boolean" required="false" repeatable="false" usage="A file's content must match all regex parameters.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Acquire Multiple Files (API Mode)">
+				<module name="w32multifileapi-acquisition" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/fileacquisitionitem.xsd" schema-type="xsd">
+						<defName>w32multifileapi-acquisition</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Path" type="String" required="true" repeatable="false" usage="Path where search starts. The trailing back-slash is optional.&amp;#xA;Examples: &amp;#xA;C:\&amp;#xA;D:\WINDOWS\" />
+					<paramdef title="Path Regex" name="Regex" type="String" required="false" repeatable="false" usage="Specifies the Perl Compatible Regular Expression a file must match to be returned.&amp;#xA;You must use standard Regular Expression escaping ( '\\' matches a single '\', '\.' matches '.' )&amp;#xA;&amp;#xA;Examples:&amp;#xA;Match all files in any subdirectory: .*&amp;#xA;Match .xls files in any subdirectory: .*\.xls&amp;#xA;Match .xls files in a subdirectory named Temp: .*\\Temp\\.*\.xls&amp;#xA;" />
+					<paramdef name="Depth" type="Int32" required="false" repeatable="false" usage="Number of directory levels to include, with -1 representing full depth" />
+					<paramdef name="Minimum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The minimum file size (in bytes) of a returned file." />
+					<paramdef name="Maximum Sizes" type="ArrayOfString" required="false" repeatable="false" usage="The maximum file size (in bytes) of a returned file." />
+					<paramdef name="Filter MD5" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific MD5 hash" />
+					<paramdef name="Filter SHA1" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA1 hash" />
+					<paramdef name="Filter SHA256" type="ArrayOfString" required="false" repeatable="false" usage="Filter the results based on a specific SHA256 hash" />
+					<paramdef name="Content Regex" type="ArrayOfString" required="false" repeatable="false" usage="Search files for particular content." />
+					<paramdef name="AND Operator" type="Boolean" required="false" repeatable="false" usage="A file's content must match all regex parameters.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Acquire Physical Memory Image">
+				<module name="w32memory-acquisition" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/memoryitem.xsd" schema-type="xsd">
+						<defName>w32memory-acquisition</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="offset" type="UInt64" required="false" repeatable="false" usage="Specifies the offset in bytes from the beginning of physical memory. Note: This will be rounded to the lower page boundary." />
+					<paramdef name="size" type="UInt64" required="false" repeatable="false" usage="Specifies the size of memory to return. Note: This will be rounded to the next page boundary." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Process Listing (Memory)">
+				<usage>
+					Lists running processes with comprehensive information about
+					imported modules, sections, and other data gathered
+					from advanced memory scanning techniques.
+				</usage>
+				<warning>
+					May return more information than expected if run against all
+					processes, specifying a PID is recommended.
+				</warning>
+				<module name="w32processes-memory" version="2.1.8.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/processitem.xsd" schema-type="xsd">
+						<defName>w32processes-memory</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="pid" type="UInt32" required="false" repeatable="false" usage="Specifies the Process ID (PID) of the process to analyze." />
+					<paramdef name="process name" type="String" required="false" repeatable="false" usage="The first 15 characters of the process name. &amp;#xA;Cannot be specified in conjunction with PID." />
+					<paramdef name="handles" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse the process handles.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="sections" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse the process memory sections.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="ports" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse the process for open ports.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="enumerate imports" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to enumerate imports of all loaded modules for a given process.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="enumerate exports" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to enumerate exports of all loaded modules for a given process.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Content Regex" type="ArrayOfString" required="false" repeatable="false" usage="Only return processes with particular content." />
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="MemD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file from memory.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to verify if the loaded modules within the processes address space are digitally signed. This operation can not be performed on a memory image.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="raw mode" type="Boolean" required="false" repeatable="false" usage="Open files for hashing in raw mode.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="detect injected dlls" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to detect injected dlls.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="strings" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse a specified process for strings. If strings is enabled, default string length is 4.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="shortest matched string" type="Int32" required="false" repeatable="false" usage="Minimum Recognized String Length. Default: 4" />
+					<paramdef name="memory file" type="String" required="false" repeatable="false" usage="The full path and filename of the file that represents the host's physical memory." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Drivers by Signature (DriverList)">
+				<module name="w32drivers-signature" version="2.1.4.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/driveritem.xsd" schema-type="xsd">
+						<defName>w32drivers-signature</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="memory file" type="String" required="false" repeatable="false" usage="The full path and filename of the file that represents the host's physical memory." />
+					<paramdef name="enumerate imports" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to enumerate imports of all loaded modules for a given driver.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="enumerate exports" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to enumerate exports of all loaded modules for a given driver.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="strings" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to parse a specified driver for strings.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="shortest matched string" type="Int32" required="false" repeatable="false" usage="Minimum Recognized String Length" />
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to verify if the loaded drivers are digitally signed. This operation can not be performed on a memory image.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="raw mode" type="Boolean" required="false" repeatable="false" usage="Open files for hashing in raw mode.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Drivers by Memory (ModuleList)">
+				<module name="w32drivers-modulelist" version="1.4.46.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/moduleitem.xsd" schema-type="xsd">
+						<defName>w32drivers-modulelist</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="memory file" type="String" required="false" repeatable="false" usage="The full path and filename of the file that represents the host's physical memory." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Hook Detection">
+				<usage>Finds the presence of root kits using IRP, System Service Descriptor Table Hooks, and Interrupt Descriptor Table Hooks (IDT)</usage>
+				<warning>May find legitmate hooks such as those used by antivirus software.</warning>
+				<module name="w32kernel-hookdetection" version="1.4.46.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/hookitem.xsd" schema-type="xsd">
+						<defName>w32kernel-hookdetection</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="idt" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to verify certain entries in the IDT.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="ssdt_index" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to verify the System Service Descriptor Table.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="ssdt_inline" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to check System Service Descriptor Table's functions for modifications to their prologues.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="drivers" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to check the systems drivers for IRP hooks.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="memory file" type="String" required="false" repeatable="false" usage="The full path and filename of the file that represents the host's physical memory." />
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Boolean indicating whether or not to verify if the hooked and hooking modules are digitally signed. This operation can not be performed on a memory image.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Process Memory Acquire">
+				<usage>Allows for the acquisition of memory space for a specified process.</usage>
+				<module name="w32processes-memoryacquire" version="1.4.62.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/memoryprocessitem.xsd" schema-type="xsd">
+						<defName>w32processes-memoryacquire</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="pid" type="UInt32" required="false" repeatable="false" usage="Specifies the Process ID (PID) of the process to analyze." />
+					<paramdef name="process name" type="String" required="false" repeatable="false" usage="The first 15 characters of the process name. &amp;#xA;Cannot be specified in conjunction with PID." />
+					<paramdef name="Content Regex" type="ArrayOfString" required="false" repeatable="false" usage="Only return processes with particular content." />
+					<paramdef name="memory file" type="String" required="false" repeatable="false" usage="The full path and filename of the file that represents the host's physical memory." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Driver Memory Acquire">
+				<usage>Allows for the acquisition of a driver from live memory or from a memory image.</usage>
+				<module name="w32driver-memoryacquire" version="1.4.40.0" />
+				<input />
+				<output>
+					<format content-type="application/octet-stream" schema="http://schemas.mandiant.com/2012/05/memoryprocessitem.xsd" schema-type="xsd">
+						<defName>w32driver-memoryacquire</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="driver name" type="String" required="false" repeatable="false" usage="The driver name to acquire." />
+					<paramdef name="memory file" type="String" required="false" repeatable="false" usage="The full path and filename of the file that represents the host's physical memory." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Web Historian URL History">
+				<usage>Returns a history of URLs visited.  The options "GetThumbnails" and "GetIndexedPageContent" are only available for Chrome and Chrome Frame browsers.</usage>
+				<module name="urlhistory" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/urlhistoryitem.xsd" schema-type="xsd">
+						<defName>urlhistory</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="TargetBrowser" type="String" required="false" repeatable="true" usage="The name of the supported browser whose history will be extracted (Firefox, Internet Explorer, Safari, or Chrome)." />
+					<paramdef name="PathToHistoryFiles" type="String" required="false" repeatable="false" usage="The path to a user profile directory, the base profile directory, or a single history file from supported browser types." />
+					<paramdef name="GetThumbnails" type="Boolean" required="false" repeatable="false" usage="Should the audit attempt to retrieve thumbnail images of websites visited">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="GetIndexedPageContent" type="Boolean" required="false" repeatable="false" usage="Should the audit attempt to retrieve indexed page content of websites visited">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Web Historian Cookie History">
+				<usage>Returns a history of Cookies stored on the system</usage>
+				<module name="cookiehistory" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/cookiehistoryitem.xsd" schema-type="xsd">
+						<defName>cookiehistory</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="TargetBrowser" type="String" required="false" repeatable="true" usage="The name of the supported browser whose history will be extracted (Firefox, Internet Explorer, Safari, or Chrome)." />
+					<paramdef name="PathToHistoryFiles" type="String" required="false" repeatable="false" usage="The path to a user profile directory, the base profile directory, or a single history file from supported browser types." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Web Historian File Download History">
+				<usage>Returns a history of Files downloaded through a browser</usage>
+				<module name="filedownloadhistory" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/filedownloadhistoryitem.xsd" schema-type="xsd">
+						<defName>filedownloadhistory</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="TargetBrowser" type="String" required="false" repeatable="true" usage="The name of the supported browser whose history will be extracted (Firefox, Internet Explorer, Safari, or Chrome)." />
+					<paramdef name="PathToHistoryFiles" type="String" required="false" repeatable="false" usage="The path to a user profile directory, the base profile directory, or a single history file from supported browser types." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Web Historian Form History">
+				<usage>Returns a history of forms edited through a browser. Form history is not collected for internet explorer since it is not stored in an index.dat file; autocomplete/autofill/intelliforms are stored in registry and need to be extracted completely differently than other internet explorer history data.</usage>
+				<module name="formhistory" version="1.4.36.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/formhistoryitem.xsd" schema-type="xsd">
+						<defName>formhistory</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="TargetBrowser" type="String" required="false" repeatable="true" usage="The name of the supported browser whose history will be extracted (Firefox, Internet Explorer, Safari, or Chrome)." />
+					<paramdef name="PathToHistoryFiles" type="String" required="false" repeatable="false" usage="The path to a user profile directory, the base profile directory, or a single history file from supported browser types." />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Host Network ARP Table">
+				<usage>Returns information about entries in the IPv4 and IPv6 Address Resolution Protocol (ARP) tables on a host.  Each host maintains its own ARP table necessary for basic network traffic routing.  Entries in the ARP table describe mappings from IP addresses to physical interface addresses.</usage>
+				<module name="w32network-arp" version="1.4.34.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/arpentryitem.xsd" schema-type="xsd">
+						<defName>w32network-arp</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Host Network DNS Cache table">
+				<usage>Returns DNS records stored in the computer's in-memory DNS cache table, which is maintained by the DNS Client Services windows component (which must be running for the table to be resident).  The DNS cache table stores various DNS records that describe recently visited website domains.</usage>
+				<module name="w32network-dns" version="1.4.34.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/dnsentryitem.xsd" schema-type="xsd">
+						<defName>w32network-dns</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Host Network Routing Table">
+				<usage>Displays the IPv4 and IPv6 routing tables which store information about how a network destination is routed on a given interface.</usage>
+				<module name="w32network-route" version="1.4.34.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/routeentryitem.xsd" schema-type="xsd">
+						<defName>w32network-route</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="Prefetch">
+				<usage>Get details of the prefetch files kept in %SystemRoot%\Prefetch.</usage>
+				<module name="w32prefetch" version="1.4.34.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/prefetchitem.xsd" schema-type="xsd">
+						<defName>w32prefetch</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+
+
+
+			<moduledef title="Persistence">
+				<usage>Get details of the persistence locations.</usage>
+				<module name="w32scripting-persistence" version="1.4.45.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/persistenceitem.xsd" schema-type="xsd">
+						<defName>w32scripting-persistence</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="MD5" type="Boolean" required="false" repeatable="false" usage="Compute the MD5 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA1" type="Boolean" required="false" repeatable="false" usage="Compute the SHA1 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="SHA256" type="Boolean" required="false" repeatable="false" usage="Compute the SHA256 hash for each returned file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Preserve Times" type="Boolean" required="false" repeatable="false" usage="Manually reset last access times for audited files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Analyze Entropy" type="Boolean" required="false" repeatable="false" usage="Calculate entropy for executable files. High entropy may indicate a packed executable.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Enumerate Imports" type="Boolean" required="false" repeatable="false" usage="Identify modules and functions imported by executable files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Enumerate Exports" type="Boolean" required="false" repeatable="false" usage="Identify modules and functions exported by executable files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Analyze File Anomalies" type="Boolean" required="false" repeatable="false" usage="Detect higher-order anomalies which may indicate malicious files.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Scan Entry Point Distance" type="Int32" required="false" repeatable="false" usage="Specifies the number of bytes from the entry point to scan for jumps." />
+					<paramdef name="Verify Digital Signatures" type="Boolean" required="false" repeatable="false" usage="Verify the digital signature on executable files">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Get Resources" type="Boolean" required="false" repeatable="false" usage="Return resources stored in a PE file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef name="Get Version Info" type="Boolean" required="false" repeatable="false" usage="Return version information stored in a PE file.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+					<paramdef title="lua_script" name="lua_script" type="String" required="false" repeatable="false" usage="Base64 encoded lua script to execute" context="hidden" />
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef title="System Restore">
+				<usage>Get details associated with each restore point on the system.</usage>
+				<module name="w32systemrestore" version="1.4.41.0" />
+				<input />
+				<output>
+					<format content-type="application/xml" schema="http://schemas.mandiant.com/2012/05/systemrestoreitem.xsd" schema-type="xsd">
+						<defName>w32systemrestore</defName>
+						<name />
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="Filter Behavior" type="String" required="false" repeatable="false" usage="Specifies what parts of an item are returned when matched using a filter.">
+						<status>deprecated</status>
+						<restrictedToValues>
+							<param title="Return the Complete Item">
+								<value xsi:type="xsd:string">CompleteItem</value>
+							</param>
+						</restrictedToValues>
+						<defaultValue xsi:type="xs:string">CompleteItem</defaultValue>
+					</paramdef>
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef context="filter">
+				<module name="xpath" version="1.4.36.0" />
+				<input>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</input>
+				<output>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="expression" type="String" required="true" repeatable="false" usage="An XPath expression to be applied to each item in an XML Audit Data document. If the expression evaluates to true or a node-set, the item will be included, otherwise it will be omitted." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef context="filter">
+				<module name="xpath2v2" version="1.4.36.0" />
+				<input>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</input>
+				<output>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="expression" type="String" required="true" repeatable="false" usage="An XPath expression to be applied to each item in an XML Audit Data document. If the expression evaluates to true or a node-set, the item will be included, otherwise it will be omitted." />
+					<paramdef name="type" type="String" required="true" repeatable="false" usage="The type of filter. Acceptable values: Standard." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef context="filter">
+				<module name="regex" version="1.4.36.0" />
+				<input>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</input>
+				<output>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="expression" type="String" required="true" repeatable="false" usage="A regular expression to be applied to each item in an XML Audit Data document. If the expression evaluates to true, the item will be included, otherwise it will be omitted." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+			<moduledef context="filter">
+				<module name="regexv2" version="1.4.36.0" />
+				<input>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</input>
+				<output>
+					<format mimetype="application/xml">
+						<defName />
+						<name>Xml</name>
+					</format>
+				</output>
+				<paramdefs>
+					<paramdef name="expression" type="String" required="true" repeatable="false" usage="A regular expression to be applied to each item in an XML Audit Data document. If the expression evaluates to true, the item will be included, otherwise it will be omitted." />
+					<paramdef name="type" type="String" required="true" repeatable="false" usage="The type of filter. Acceptable values: Inclusion, Standard." />
+					<paramdef name="path" type="String" required="true" repeatable="false" usage="The path to the item being filtered. Used only with Inclusion filters." />
+					<paramdef name="Prevent Hibernation" type="Boolean" required="false" repeatable="false" usage="Prevents the host machine from entering hibernation while this module is executed.">
+						<defaultValue xsi:type="xs:boolean">false</defaultValue>
+					</paramdef>
+				</paramdefs>
+			</moduledef>
+		</moduledefs>
+	</processor>
+	<moduleresults>
+		<moduleresult xsi:type="AuditModuleResult">
+			<issues generator="issues" generatorVersion="1.0" itemSchemaLocation="http://www.mandiant.com/schemas/issue.xsd" href="issues.mir.w32system.xml" />
+			<config />
+			<auditdata href="mir.w32system.xml" generator="w32system" generatorVersion="1.4.36.0" itemSchemaLocation="http://schemas.mandiant.com/2012/05/systeminfoitem.xsd" />
+		</moduleresult>
+	</moduleresults>
+</batchresult>

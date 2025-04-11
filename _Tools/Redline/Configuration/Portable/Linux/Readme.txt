@@ -1,0 +1,3 @@
+﻿On the Linux machine you want to audit, run the 'RunRedlineAudit' script either by double-clicking the file in File Browser or executing it in Terminal (via 'bash RunRedlineAudit'). You will need to know superuser (sudo) password in order to run the script. The script should preferably be run from removable media (e.g. a USB Hard Drive). The script will run the Collector, as you configured it, and save the results to a folder named 'Sessions\AnalysisSession1'. Every time you run the script, a new AnalysisSession folder (AnalysisSession2, AnalysisSession3, etc.) is created.
+
+When the collection is finished, transfer the results back to your analysis machine, then double-click 'AnalysisSession.mans' file located inside the AnalysisSession folder.

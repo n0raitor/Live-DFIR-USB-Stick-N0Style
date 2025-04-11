@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" chaining="implicit">
+  <commands>
+    
+      <command xsi:type="ExecuteModuleCommand">
+      <module name="w32driver-memoryacquire" version="1.0.34.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+        <param name="driver name">
+           <value xsi:type="xsd:string"/>
+         </param>
+         <param name="memory file">
+            <value xsi:type="xsd:string"/>
+          </param>
+          </parameters>
+      </config>
+      </command>
+			       
+  </commands>
+</script>

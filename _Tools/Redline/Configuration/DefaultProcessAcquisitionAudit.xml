@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" chaining="implicit">
+  <commands>
+    
+      <command xsi:type="ExecuteModuleCommand">
+      <module name="w32processes-memoryacquire" version="1.0.34.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+        <param name="pid">
+            <value xsi:type="xsd:unsignedInt">0</value>
+          </param>
+          <param name="memory file">
+            <value xsi:type="xsd:string"/>
+          </param>
+          </parameters>
+      </config>
+      </command>
+			       
+  </commands>
+</script>

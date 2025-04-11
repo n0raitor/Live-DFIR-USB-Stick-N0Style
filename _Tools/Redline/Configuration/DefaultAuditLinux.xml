@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" chaining="implicit">
+	<commands>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="processes-api" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig" />
+		</command>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="files-api" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig">
+							<parameters>
+					<param name="Path">
+						<value xsi:type="xsd:string">/</value>
+					</param>
+					<param name="Regex">
+						<value xsi:type="xsd:string">^(?:usr|lib|lib64|opt|home|sbin|bin|etc|root)+</value>
+					</param>
+					<!--<param name="Depth" />-->
+					<param name="MD5">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+					<param name="SHA1">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="SHA256">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="Preserve Times">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="Minimum Sizes" />
+					<param name="Maximum Sizes" />
+					<param name="Filter MD5" />
+					<param name="Filter SHA1" />
+					<param name="Filter SHA256" />
+					<param name="AND Operator">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="Include Files">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+					<param name="Include Directories">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+					<param name="Include Remote Locations">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+				</parameters>
+			</config>
+		</command>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="sysinfo" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig" />
+		</command>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="ports" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig" />
+		</command>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="shell-history" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig">
+				<parameters>
+					<param name="UserList" />
+					<param name="ShellList" />
+					<param name="CommandRegex" />
+				</parameters>
+			</config>
+		</command>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="logins" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig">
+				<parameters>
+					<param name="History Paths">
+						<value xsi:type="xsd:string">/var/run/utmp</value>
+					</param>
+					<param name="Include Failed Logins">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+					<param name="Include Historical Logins">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+				</parameters>
+			</config>
+		</command>
+    
+		<command xsi:type="ExecuteModuleCommand">
+			<module name="kernel-modules" version="2.1.4.0" />
+			<config xsi:type="ParameterListModuleConfig">
+				<parameters>
+					<param name="MD5">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+					<param name="SHA1">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="SHA256">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="Enumerate Aliases">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+					<param name="Enumerate Dependencies">
+						<value xsi:type="xsd:boolean">true</value>
+					</param>
+					<param name="Enumerate Parameters">
+						<value xsi:type="xsd:boolean">false</value>
+					</param>
+				</parameters>
+			</config>
+		</command>
+
+    <command xsi:type="ExecuteModuleCommand">
+      <module name="tasks" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+    </command>
+
+  </commands>
+</script>

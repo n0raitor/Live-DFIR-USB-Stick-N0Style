@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--Ref: http://en.wikipedia.org/wiki/List_of_DNS_record_types -->
+<!--Ref: http://technet.microsoft.com/en-us/library/cc758321%28v=ws.10%29.aspx -->
+<DnsRecordTypes>
+	<DnsRecordTypeDescriptions>
+		<DnsRecordTypeDescription Name="A">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Address (A) resource record. Returns a 32-bit IPv4 address, most commonly used to map hostnames to an IP address of the host</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="AAAA">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>IPv6 host address (AAAA) resource record. Returns a 128-bit IPv6 address, most commonly used to map hostnames to an IP address of the host.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="AFSDB">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Andrew File System Database (AFSDB) resource record. Location of database servers of an AFS cell. This record is commonly used by AFS clients to contact AFS cells outside their local domain. A subtype of this record is used by the obsolete DCE/DFS file system.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="ATMA">
+			<Description>Asynchronous Transfer Mode address (ATMA) resource record. Maps a domain name to an ATM address.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="CNAME">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Canonical name (CNAME) resource record. Alias of one name to another: the DNS lookup will continue by retrying the lookup with the new name.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="DHCID">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>DHCP identifier (DHCID) resource record. Used in conjunction with the FQDN option to DHCP</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="DNAME">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Delegation Name (DNAME) resource record. Creates an alias for a name and all its subnames, unlike CNAME, which aliases only the exact name in its label. Like the CNAME record, the DNS lookup will continue by retrying the lookup with the new name.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="DNSKEY">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>DNS Key (DNSKEY) resource Record. The key record used in DNSSEC. Uses the same format as the KEY record.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="DS">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Delegation Signer (DS) resource record. The record used to identify the DNSSEC signing key of a delegated zone.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="HINFO">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>Host information (HINFO) resource record. used to acquire general information about a host.  The main use is for protocols such as FTP that can use special procedures when talking between machines or operating systems of the same type. Standard values for CPU and OS can be found in [RFC-1010].</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="ISDN">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1183</SourceURL>
+			<Description>Integrated Services Digital Network (ISDN) resource record. Maps a DNS domain name to an ISDN telephone number. Telephone numbers used with this record should follow ITU-T E.163/E.164 international telephone numbering standards, which are compatible with current international phone numbering plans already in use.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="KEY">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Key resource record. Specifies the public key of a zone, host, user, etc. Used only for SIG(0) and TKEY.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MB">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>Mailbox (MB) resource record. Maps a domain name to a host which has the specified mailbox.  MB records cause additional section processing which looks up an A type RRs corresponding to specified domain name.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MD">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc973</SourceURL>
+			<Description>Original specifications uses MD and MF records for mail agent binding. The problem is that a mailer making a MAILA query, which asks for both types, can't use the cache since the cache might have the results for a MD or MF query.  RFC 973 replaces MD and MF with a new type of resource record called MX which conveys similar information in a single RR type.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MF">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc973</SourceURL>
+			<Description>Original specifications uses MD and MF records for mail agent binding. The problem is that a mailer making a MAILA query, which asks for both types, can't use the cache since the cache might have the results for a MD or MF query.  RFC 973 replaces MD and MF with a new type of resource record called MX which conveys similar information in a single RR type.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MG">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>Mail group (MG) resource record.  Maps a domain name which specifies a mailbox to a member of the mail group specified by the domain name.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MINFO">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>Mailbox mail list information (MINFO) resource record. Maps a domain name to a mailbox which is responsible for the mailing list or mailbox or which is to receive error messages related to the mailing list.  If this domain name names the root, the owner of the MINFO RR is responsible for itself.  Note that many existing mailing lists use a mailbox X-request for the RMAILBX field of mailing list X, e.g., Msgroup-request for Msgroup.  This field provides a more general mechanism.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MR">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>Mailbox renamed (MR) resource record. A domain name which specifies a mailbox which is the proper rename of the specified mailbox. The main use for MR is as a forwarding entry for a user who has moved to a different mailbox.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="MX">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Mail exchange (MX) resource record.  Maps a domain name to a list of message transfer agents for that domain</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="NS">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Name Server (NS) resource record.  Delegates a DNS zone to use the given authoritative name servers</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="NULL">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>NULL records allows anything at all to be contained in the RDATA field so long as it is 65535 octets or less.  NULL RRs are not allowed in master files.  NULLs are used as placeholders in some experimental extensions of the DNS.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="NAPTR">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Naming Authority Pointer (NAPTR) resource record.  Allows regular expression based rewriting of domain names which can then be used as URIs, further domain names to lookups, etc.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="NSEC">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Next Secure (NSEC) resource record. Part of DNSSEC—used to prove a name does not exist. Uses the same format as the (obsolete) NXT record.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="NXT">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc2535</SourceURL>
+			<Description>Next (NXT) resource record. Securely indicates that an owner name in a certain name interval does not exist in a zone and it also indicates what resource record types are present for an existing name.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="OPT">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc2671</SourceURL>
+			<Description>An OPT resource record is an optional piece of data (intended to extend DNS functionality) belonging to a transport level message. It is associated with a DNS request or response and contains additional metadata containing attribute value pairs.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="PTR">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Pointer (PTR) resource record. Pointer to a canonical name. Unlike a CNAME, DNS processing does NOT proceed, just the name is returned. The most common use is for implementing reverse DNS lookups, but other uses include such things as DNS-SD.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="RP">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Responsible Person (RP) resource record. Information about the responsible person(s) for the domain.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="RRSIG">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>DNSSEC Signature (RRSIG) resource record. Signature for a DNSSEC-secured record set. Uses the same format as the SIG record.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="RT">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1183</SourceURL>
+			<Description>Route through (RT) resource record. Provides a route-through binding for hosts that do not have their own direct wide area network addresses.  It is used in much the same way as the MX RR.
+			</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="SIG">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc2535</SourceURL>
+			<Description>Signature resource record. Used to cryptographically binds the RRset being signed to the signer and a validity interval.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="SOA">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Start of authority (SOA) resource record. Specifies authoritative information about a DNS zone, including the primary name server, the email of the domain administrator, the domain serial number, and several timers relating to refreshing the zone.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="SRV">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Service locator (SRV) resource record. Generalized service location record, used for newer protocols instead of creating protocol-specific records such as MX.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="TEXT">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Text (TXT) resource record. Originally for arbitrary human-readable text in a DNS record. Since the early 1990s, however, this record more often carries machine-readable data.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="TKEY">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Secret Key (TKEY) resource record. A method of providing keying material to be used with TSIG that is encrypted under the public key in an accompanying KEY RR.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="TSIG">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Transaction Signature (TSIG) resource record. Can be used to authenticate dynamic updates as coming from an approved client, or to authenticate responses as coming from an approved recursive name server similar to DNSSEC.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="TXT">
+			<SourceName>Wikipedia</SourceName>
+			<SourceURL>http://en.wikipedia.org/wiki/List_of_DNS_record_types</SourceURL>
+			<LicenseURL>http://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License</LicenseURL>
+			<Description>Text (TXT) resource record. Originally for arbitrary human-readable text in a DNS record. Since the early 1990s, however, this record more often carries machine-readable data.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="WINS">
+			<Description>WINS is involved in the resolution of a DNS lookup. If a name is unable to be found in a DNS server’s forward lookup zone, a WINS record can be used to identify a WINS server and retrieve the IP address information from it.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="WINSR">
+			<Description>WINS-R is involved in the resolution of a reverse DNS lookup.  If the authoritative reverse lookup zone does not contain the requested name, a node adapter status request will be sent to the queried IP, and the domain supplied in the WINS-R record will be appended to the resulting response to this request.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="WKS">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1035</SourceURL>
+			<Description>Well-known service (WKS) resource record. Lists the services supported by an address. There can be a record for both TCP and UDP if both are supported. If there are multiple addresses, then there can be multiple records.</Description>
+		</DnsRecordTypeDescription>
+		<DnsRecordTypeDescription Name="X25">
+			<SourceName>ietf.org</SourceName>
+			<SourceURL>http://tools.ietf.org/html/rfc1183</SourceURL>
+			<Description>X.25 (X25) resource record. Maps a DNS domain name to a PSDN (Public Switched Data Network) address</Description>
+		</DnsRecordTypeDescription>
+	</DnsRecordTypeDescriptions>
+</DnsRecordTypes>

@@ -1,0 +1,81 @@
+#!/bin/bash  
+
+shopt -s nullglob
+
+FULLPATH=$( cd "$( dirname "${BASH_SOURCE[0]}" )"; pwd )
+#echo $FULLPATH
+cd -- "$FULLPATH"
+ALL_DIR=Sessions
+SES_DIR=AnalysisSession
+SES_FILE=AnalysisSession
+AGENT_PATH=MacOS/bin/xagt
+AUDIT_DIR=Audits
+SCRIPT_FILE=AuditScript.xml
+DEST_SCRIPT=Script.xml
+
+
+if [ ! -d $ALL_DIR ] 
+then
+	mkdir $ALL_DIR
+fi
+
+#echo Found $ALL_DIR!
+max=0
+for d in $ALL_DIR/$SES_DIR*/ ; do
+	#if [ -d $d ]
+	#then
+		#echo $d
+		sn=$(echo $d | cut -c25-)
+		#echo $sn
+		sn=${sn%?}
+		#echo $sn
+	
+		if [ $sn -gt $max ]
+		then
+			max=$sn
+		fi
+		#fi
+done
+
+#echo $max
+
+let max++
+SES_PATH=$ALL_DIR/$SES_DIR$max
+echo "Audit will be stored in $ALL_DIR/$SES_DIR$max/"
+mkdir $SES_PATH
+
+#-------------------------------------
+
+FULL_AUDIT_PATH=$FULLPATH/$SES_PATH/$AUDIT_DIR
+#echo $FULL_AUDIT_PATH
+# xagt will create output directory by itself, but then it will be accessible by root only
+mkdir "$FULL_AUDIT_PATH"
+
+FULL_AGENT_PATH=\"$FULLPATH/$AGENT_PATH\"
+ARGS="-o \"$FULL_AUDIT_PATH\" -f $SCRIPT_FILE"
+
+xagt_cmd="sudo $FULL_AGENT_PATH $ARGS"
+#echo $xagt_cmd
+echo Starting audit...
+eval $xagt_cmd
+echo Audit finished!
+
+# Copy script file to output directory
+cp $SCRIPT_FILE "$FULL_AUDIT_PATH/$DEST_SCRIPT"
+
+# Create platform information file
+PLATFORM_FILE_PATH=$FULL_AUDIT_PATH/platform.xml
+
+echo '<?xml version="1.0" encoding="UTF-8"?>'>"$PLATFORM_FILE_PATH"
+echo '<Root>'>>"$PLATFORM_FILE_PATH"
+echo "	<AuditPlatform>OSX</AuditPlatform>">>"$PLATFORM_FILE_PATH"
+echo '</Root>'>>"$PLATFORM_FILE_PATH"
+
+# Create .MANS file
+SES_FILE_PATH="$SES_PATH/$SES_FILE$max.mans"
+#echo $SES_FILE_PATH
+
+echo '<?xml version="1.0" encoding="UTF-8"?>'>$SES_FILE_PATH
+echo '<Root>'>>$SES_FILE_PATH
+echo "	<AuditPath>$AUDIT_DIR</AuditPath>">>$SES_FILE_PATH
+echo '</Root>'>>$SES_FILE_PATH

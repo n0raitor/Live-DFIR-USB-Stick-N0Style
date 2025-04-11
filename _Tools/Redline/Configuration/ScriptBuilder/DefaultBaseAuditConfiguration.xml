@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BaseAuditConfigurations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--RegistryItem-->
+  <BaseAuditConfiguration Name="RegistryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32registryraw" Enabled="0" Title="Registry Listing (Raw Mode)">
+        <BaseModuleParams>
+					<BaseModuleParam ParamName="Path" ParamValue=""/>
+					<BaseModuleParam ParamName="Path Regex" ParamValue=""/>
+					<BaseModuleParam ParamName="Value Regex" ParamValue=""/>
+					<BaseModuleParam ParamName="Depth" ParamValue=""/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="w32registryapi" Enabled="1" Title="Registry Listing (API Mode)">
+        <BaseModuleParams>
+					<BaseModuleParam ParamName="Path" ParamValue=""/>
+					<BaseModuleParam ParamName="Path Regex" ParamValue=""/>
+          <BaseModuleParam ParamName="Value Regex" ParamValue=""/>
+          <BaseModuleParam ParamName="Depth" ParamValue=""/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--UrlHistoryItem-->
+  <BaseAuditConfiguration Name="UrlHistoryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="urlhistory" Enabled="1" Title="URL History">
+				<BaseModuleParams>
+					<BaseModuleParam ParamName="TargetBrowser" ParamValue=""/>
+					<BaseModuleParam ParamName="PathToHistoryFiles" ParamValue=""/>
+				</BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--TaskItem-->
+  <BaseAuditConfiguration Name="TaskItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32tasks" Enabled="1" Title="Task Listing">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--PortItem-->
+  <BaseAuditConfiguration Name="PortItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32ports" Enabled="1" Title="Network Ports Listing">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--UserItem-->
+  <BaseAuditConfiguration Name="UserItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32useraccounts" Enabled="1" Title="User Accounts">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--HookItem-->
+  <BaseAuditConfiguration Name="HookItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32kernel-hookdetection" Enabled="1" Title="Hook Detection">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--ProcessItem-->
+  <BaseAuditConfiguration Name="ProcessItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32processes-handle" Enabled="0" Title="Process Listing (Handles Mode)">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="handles" ParamValue="true"/>
+          <BaseModuleParam ParamName="Strings" ParamValue="false"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="w32processes-memory" Enabled="1" Title="Process Listing (Memory)">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="handles" ParamValue="true"/>
+          <BaseModuleParam ParamName="Strings" ParamValue="false"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="w32processes-API" Enabled="1" Title="Process Listing (API Mode)">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="handles" ParamValue="true"/>
+          <BaseModuleParam ParamName="Strings" ParamValue="false"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--ModuleItem-->
+  <BaseAuditConfiguration Name="ModuleItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32drivers-modulelist" Enabled="1" Title="Drivers by Memory (ModuleList)">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--VolumeItem-->
+  <BaseAuditConfiguration Name="VolumeItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32volumes" Enabled="1" Title="Volume Listing">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--FileItem-->
+  <BaseAuditConfiguration Name="FileItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="files-api" Enabled="1" Title="File Listing (API Mode)">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="%systemdrive%"/>
+          <BaseModuleParam ParamName="Regex" ParamValue=""/>
+					<BaseModuleParam ParamName="Depth" ParamValue="6"/>
+          <BaseModuleParam ParamName="Strings" ParamValue="false"/>
+          <BaseModuleParam ParamName="Include Files" ParamValue="true"/>
+          <BaseModuleParam ParamName="Include Directories" ParamValue="true"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="files-raw" Enabled="0" Title="File Listing (Raw Mode)">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="%systemdrive%"/>
+					<BaseModuleParam ParamName="Regex" ParamValue=""/>
+          <BaseModuleParam ParamName="Depth" ParamValue="6"/>
+          <BaseModuleParam ParamName="Strings" ParamValue="false"/>
+          <BaseModuleParam ParamName="Include Files" ParamValue="true"/>
+          <BaseModuleParam ParamName="Include Directories" ParamValue="true"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="files-api" Title="File Listing (OS X)" TargetPlatform="OSX">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="/" />
+          <BaseModuleParam ParamName="Regex" ParamValue="^(?:Applications|Library|System|User|bin|cores|opt|private|sbin|usr)+" />
+          <BaseModuleParam ParamName="Depth" ParamValue="" />
+          <BaseModuleParam ParamName="Strings" ParamValue="false" />
+          <BaseModuleParam ParamName="Include Files" ParamValue="true" />
+          <BaseModuleParam ParamName="Include Directories" ParamValue="true" />
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="files-raw" Enabled="0" Title="File Listing (OS X)" TargetPlatform="OSX">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="/" />
+          <BaseModuleParam ParamName="Regex" ParamValue="^(?:Applications|Library|System|User|bin|cores|opt|private|sbin|usr)+" />
+          <BaseModuleParam ParamName="Depth" ParamValue="" />
+          <BaseModuleParam ParamName="Strings" ParamValue="false" />
+          <BaseModuleParam ParamName="Include Files" ParamValue="true" />
+          <BaseModuleParam ParamName="Include Directories" ParamValue="true" />
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="files-api" Title="File Listing (Linux)" TargetPlatform="Linux">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="/" />
+          <BaseModuleParam ParamName="Regex" ParamValue="^(?:usr|lib|lib64|opt|home|sbin|bin|etc|root)+" />
+          <BaseModuleParam ParamName="Depth" ParamValue="" />
+          <BaseModuleParam ParamName="Strings" ParamValue="false" />
+          <BaseModuleParam ParamName="Include Files" ParamValue="true" />
+          <BaseModuleParam ParamName="Include Directories" ParamValue="true" />
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+      <BaseAuditConfigurationModule Name="files-raw" Enabled="0" Title="File Listing (Linux)" TargetPlatform="Linux">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="/" />
+          <BaseModuleParam ParamName="Regex" ParamValue="^(?:usr|lib|lib64|opt|home|sbin|bin|etc|root)+" />
+          <BaseModuleParam ParamName="Depth" ParamValue="" />
+          <BaseModuleParam ParamName="Strings" ParamValue="false" />
+          <BaseModuleParam ParamName="Include Files" ParamValue="true" />
+          <BaseModuleParam ParamName="Include Directories" ParamValue="true" />
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--SystemInfoItem-->
+  <BaseAuditConfiguration Name="">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32system" Enabled="1" Title="System Information">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--HiveItem-->
+  <BaseAuditConfiguration Name="HiveItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32hivelist" Enabled="1" Title="Registry Hive Listing">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--DriverItem-->
+  <BaseAuditConfiguration Name="DriverItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32drivers-signature" Enabled="1" Title="Drivers by Signature (DriverList)">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--CookieHistoryItem-->
+  <BaseAuditConfiguration Name="CookieHistoryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="cookiehistory" Enabled="1" Title="Web Historian Cookie History">
+				<BaseModuleParams>
+					<BaseModuleParam ParamName="TargetBrowser" ParamValue=""/>
+					<BaseModuleParam ParamName="PathToHistoryFiles" ParamValue=""/>
+				</BaseModuleParams>
+			</BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--ServiceItem-->
+  <BaseAuditConfiguration Name="ServiceItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32services" Enabled="1" Title="Services Listing">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="MD5" ParamValue="true"/>
+          <BaseModuleParam ParamName="Verify Digital Signatures" ParamValue="true"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--EventLogItem-->
+  <BaseAuditConfiguration Name="EventLogItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32eventlogs" Enabled="1" Title="Event Logs">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--FileDownloadHistoryItem-->
+  <BaseAuditConfiguration Name="FileDownloadHistoryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="filedownloadhistory" Enabled="1" Title="Web Historian File Download History">
+				<BaseModuleParams>
+					<BaseModuleParam ParamName="TargetBrowser" ParamValue=""/>
+					<BaseModuleParam ParamName="PathToHistoryFiles" ParamValue=""/>
+				</BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--DiskItem-->
+  <BaseAuditConfiguration Name="DiskItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32disks" Enabled="1" Title="Disk Listing">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--FormHistoryItem-->
+  <BaseAuditConfiguration Name="FormHistoryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="formhistory" Enabled="1" Title="Web Historian Form History">
+				<BaseModuleParams>
+					<BaseModuleParam ParamName="TargetBrowser" ParamValue=""/>
+					<BaseModuleParam ParamName="PathToHistoryFiles" ParamValue=""/>
+				</BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--PrefetchItem-->
+  <BaseAuditConfiguration Name="PrefetchItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32prefetch" Enabled="1" Title="Prefetch">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--ArpEntryItem-->
+  <BaseAuditConfiguration Name="ArpEntryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32network-arp" Enabled="1" Title="Network ARP">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--DnsEntryItem-->
+  <BaseAuditConfiguration Name="DnsEntryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32network-dns" Enabled="1" Title="Network DNS">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--RouteEntryItem-->
+  <BaseAuditConfiguration Name="RouteEntryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32network-route" Enabled="1" Title="Network Route">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--SystemRestoreItem-->
+  <BaseAuditConfiguration Name="SystemRestoreItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32systemrestore" Enabled="1" Title="System Restore">
+        <BaseModuleParams/>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+
+  <!--PersistenceItem-->
+  <BaseAuditConfiguration Name="PersistenceItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="w32scripting-persistence" Enabled="1" Title="Persistence">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="Path" ParamValue="%systemdrive%"/>
+          <BaseModuleParam ParamName="MD5" ParamValue="true"/>
+          <BaseModuleParam ParamName="SHA1" ParamValue="true"/>
+          <BaseModuleParam ParamName="SHA256" ParamValue="true"/>
+          <BaseModuleParam ParamName="Analyze Entropy" ParamValue="true"/>
+          <BaseModuleParam ParamName="Enumerate Imports" ParamValue="true"/>
+          <BaseModuleParam ParamName="Enumerate Exports" ParamValue="true"/>
+          <BaseModuleParam ParamName="Analyze File Anomalies" ParamValue="true"/>
+          <BaseModuleParam ParamName="Scan Entry Point Distance" ParamValue=""/>
+          <BaseModuleParam ParamName="Verify Digital Signatures" ParamValue="true"/>
+          <BaseModuleParam ParamName="Get Resources" ParamValue="true"/>
+          <BaseModuleParam ParamName="Get Version Info" ParamValue="true"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+  
+  <!--LoginHistoryItem-->
+  <BaseAuditConfiguration Name="LoginHistoryItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="logins" Title="Login History" TargetPlatform="Linux">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="History Paths" ParamValue="/var/run/utmp" />
+          <BaseModuleParam ParamName="Include Failed Logins" ParamValue="true" />
+          <BaseModuleParam ParamName="Include Historical Logins" ParamValue="true" />
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+  
+  <!--KernelModuleItem-->
+  <BaseAuditConfiguration Name="KernelModuleItem">
+    <BaseAuditConfigurationModules>
+      <BaseAuditConfigurationModule Name="kernel-modules" Enabled="1" Title="Kernel Modules" TargetPlatform="Linux">
+        <BaseModuleParams>
+          <BaseModuleParam ParamName="MD5" ParamValue="true"/>
+          <BaseModuleParam ParamName="SHA1" ParamValue="false"/>
+          <BaseModuleParam ParamName="SHA256" ParamValue="false"/>
+          <BaseModuleParam ParamName="Enumerate Aliases" ParamValue="false"/>
+          <BaseModuleParam ParamName="Enumerate Dependencies" ParamValue="true"/>
+          <BaseModuleParam ParamName="Enumerate Parameters" ParamValue="false"/>
+        </BaseModuleParams>
+      </BaseAuditConfigurationModule>
+    </BaseAuditConfigurationModules>
+  </BaseAuditConfiguration>
+  
+</BaseAuditConfigurations>
+

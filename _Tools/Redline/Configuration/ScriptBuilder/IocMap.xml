@@ -1,0 +1,1436 @@
+<OpenIOCMap target="application/vnd.mandiant.mir" processor="AgentManagerInfo" version="2.3.2000">
+  <module name="dissolve" version="1.4.29.0" root="EmptyStubItem">
+    <param name="immediate" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="deactivate" version="1.4.29.0" root="EmptyStubItem">
+    <param name="immediate" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="restart" version="1.4.29.0" root="EmptyStubItem">
+    <param name="immediate" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32useraccounts" version="1.4.29.0" root="UserItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>UserItem/Username</Term>
+      <Term>UserItem/fullname</Term>
+      <Term>UserItem/description</Term>
+      <Term>UserItem/grouplist/groupname</Term>
+      <Term>UserItem/SecurityID</Term>
+      <Term>UserItem/SecurityType</Term>
+      <Term>UserItem/LastLogin</Term>
+      <Term>UserItem/disabled</Term>
+      <Term>UserItem/lockedout</Term>
+      <Term>UserItem/passwordrequired</Term>
+      <Term>UserItem/userpasswordage</Term>
+      <Term>UserItem/homedirectory</Term>
+      <Term>UserItem/scriptpath</Term>
+    </param>
+  </module>
+  <module name="w32tasks" version="1.4.29.0" root="TaskItem">
+    <param name="MD5" type="Boolean" value="true">
+      <Term>TaskItem/md5sum</Term>
+      <Term>TaskItem/ActionList/Action/ExecProgramMd5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>TaskItem/sha1sum</Term>
+      <Term>TaskItem/ActionList/Action/ExecProgramSha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>TaskItem/sha256sum</Term>
+      <Term>TaskItem/ActionList/Action/ExecProgramSha256sum</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>TaskItem/SignatureExists</Term>
+      <Term>TaskItem/SignatureVerified</Term>
+      <Term>TaskItem/SignatureDescription</Term>
+      <Term>TaskItem/CertificateSubject</Term>
+      <Term>TaskItem/CertificateIssuer</Term>
+      <Term>TaskItem/ActionList/Action/DigitalSignature/SignatureExists</Term>
+      <Term>TaskItem/ActionList/Action/DigitalSignature/SignatureVerified</Term>
+      <Term>TaskItem/ActionList/Action/DigitalSignature/Description</Term>
+      <Term>TaskItem/ActionList/Action/DigitalSignature/CertificateIssuer</Term>
+      <Term>TaskItem/ActionList/Action/DigitalSignature/CertificateSubject</Term>
+    </param>
+    <param name="Preserve Times" type="Boolean" value=""></param>
+    <param name="raw mode" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>TaskItem/AccountName</Term>
+      <Term>TaskItem/VirtualPath</Term>
+      <Term>TaskItem/CreationDate</Term>
+      <Term>TaskItem/AccountRunLevel</Term>
+      <Term>TaskItem/AccountLogonType</Term>
+      <Term>TaskItem/ApplicationName</Term>
+      <Term>TaskItem/Comment</Term>
+      <Term>TaskItem/Creator</Term>
+      <Term>TaskItem/ExitCode</Term>
+      <Term>TaskItem/Flag</Term>
+      <Term>TaskItem/MaxRunTime</Term>
+      <Term>TaskItem/MostRecentRunTime</Term>
+      <Term>TaskItem/Name</Term>
+      <Term>TaskItem/NextRunTime</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerBegin</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerFrequency</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerEnabled</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerEnd</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerMaxRunTime</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerDelay</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerSessionChangeType</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerSubscription</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerValueQueries</Term>
+      <Term>TaskItem/TriggerList/Trigger/TriggerUsername</Term>
+      <Term>TaskItem/ActionList/Action/ActionType</Term>
+      <Term>TaskItem/ActionList/Action/COMClassId</Term>
+      <Term>TaskItem/ActionList/Action/COMData</Term>
+      <Term>TaskItem/ActionList/Action/EmailBody</Term>
+      <Term>TaskItem/ActionList/Action/EmailServer</Term>
+      <Term>TaskItem/ActionList/Action/EmailSubject</Term>
+      <Term>TaskItem/ActionList/Action/EmailTo</Term>
+      <Term>TaskItem/ActionList/Action/EmailCC</Term>
+      <Term>TaskItem/ActionList/Action/EmailBCC</Term>
+      <Term>TaskItem/ActionList/Action/EmailReplyTo</Term>
+      <Term>TaskItem/ActionList/Action/EmailFrom</Term>
+      <Term>TaskItem/ActionList/Action/EmailAttachments</Term>
+      <Term>TaskItem/ActionList/Action/ExecProgramPath</Term>
+      <Term>TaskItem/ActionList/Action/ExecArguments</Term>
+      <Term>TaskItem/ActionList/Action/ExecWorkingDirectory</Term>
+      <Term>TaskItem/ActionList/Action/ShowMessageTitle</Term>
+      <Term>TaskItem/ActionList/Action/ShowMessageBody</Term>
+      <Term>TaskItem/Parameters</Term>
+      <Term>TaskItem/Priority</Term>
+      <Term>TaskItem/Status</Term>
+      <Term>TaskItem/WorkItemData</Term>
+      <Term>TaskItem/WorkingDirectory</Term>
+    </param>
+  </module>
+  <module name="w32system" version="1.4.29.0" root="SystemInfoItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>SystemInfoItem/directory</Term>
+      <Term>SystemInfoItem/machine</Term>
+      <Term>SystemInfoItem/totalphysical</Term>
+      <Term>SystemInfoItem/availphysical</Term>
+      <Term>SystemInfoItem/uptime</Term>
+      <Term>SystemInfoItem/OS</Term>
+	  <Term>SystemInfoItem/OSbitness</Term>
+      <Term>SystemInfoItem/hostname</Term>
+      <Term>SystemInfoItem/date</Term>
+      <Term>SystemInfoItem/user</Term>
+      <Term>SystemInfoItem/domain</Term>
+      <Term>SystemInfoItem/processor</Term>
+      <Term>SystemInfoItem/patchLevel</Term>
+      <Term>SystemInfoItem/buildNumber</Term>
+      <Term>SystemInfoItem/procType</Term>
+      <Term>SystemInfoItem/productID</Term>
+      <Term>SystemInfoItem/productName</Term>
+      <Term>SystemInfoItem/regOrg</Term>
+      <Term>SystemInfoItem/regOwner</Term>
+      <Term>SystemInfoItem/installDate</Term>
+      <Term>SystemInfoItem/MAC</Term>
+      <Term>SystemInfoItem/timezoneDST</Term>
+      <Term>SystemInfoItem/timezoneStandard</Term>
+      <Term>SystemInfoItem/biosInfo/biosDate</Term>
+      <Term>SystemInfoItem/biosInfo/biosVersion</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/adapter</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/description</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/MAC</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/ipArray/ipInfo/ipAddress</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/ipArray/ipInfo/subnetMask</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/ipGatewayArray/ipGateway</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/dhcpServerArray/dhcpServer</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/dhcpLeaseExpires</Term>
+      <Term>SystemInfoItem/networkArray/networkInfo/dhcpLeaseObtained</Term>
+    </param>
+  </module>
+  <module name="w32services" version="1.4.29.0" root="ServiceItem">
+    <param name="MD5" type="Boolean" value="true">
+      <Term>ServiceItem/pathmd5sum</Term>
+      <Term>ServiceItem/serviceDLLmd5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>ServiceItem/pathsha1sum</Term>
+      <Term>ServiceItem/serviceDLLsha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>ServiceItem/pathsha256sum</Term>
+      <Term>ServiceItem/serviceDLLsha256sum</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>ServiceItem/pathSignatureExists</Term>
+      <Term>ServiceItem/pathSignatureVerified</Term>
+      <Term>ServiceItem/pathSignatureDescription</Term>
+      <Term>ServiceItem/pathCertificateSubject</Term>
+      <Term>ServiceItem/pathCertificateIssuer</Term>
+      <Term>ServiceItem/serviceDLLCertificateSubject</Term>
+      <Term>ServiceItem/serviceDLLCertificateIssuer</Term>
+      <Term>ServiceItem/serviceDLLSignatureExists</Term>
+      <Term>ServiceItem/serviceDLLSignatureVerified</Term>
+      <Term>ServiceItem/serviceDLLSignatureDescription</Term>
+    </param>
+    <param name="Preserve Times" type="Boolean" value=""></param>
+    <param name="raw mode" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>ServiceItem/name</Term>
+      <Term>ServiceItem/descriptiveName</Term>
+      <Term>ServiceItem/description</Term>
+      <Term>ServiceItem/mode</Term>
+      <Term>ServiceItem/startedAs</Term>
+      <Term>ServiceItem/path</Term>
+      <Term>ServiceItem/arguments</Term>
+      <Term>ServiceItem/serviceDLL</Term>
+      <Term>ServiceItem/status</Term>
+      <Term>ServiceItem/pid</Term>
+      <Term>ServiceItem/type</Term>
+    </param>
+  </module>
+  <module name="w32ports" version="1.4.29.0" root="PortItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>PortItem/pid</Term>
+      <Term>PortItem/process</Term>
+      <Term>PortItem/path</Term>
+      <Term>PortItem/state</Term>
+      <Term>PortItem/CreationTime</Term>
+      <Term>PortItem/localIP</Term>
+      <Term>PortItem/remoteIP</Term>
+      <Term>PortItem/localPort</Term>
+      <Term>PortItem/remotePort</Term>
+      <Term>PortItem/protocol</Term>
+    </param>
+  </module>
+  <module name="w32processes-API" version="1.4.29.0" root="ProcessItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>ProcessItem/pid</Term>
+      <Term>ProcessItem/parentpid</Term>
+      <Term>ProcessItem/Username</Term>
+      <Term>ProcessItem/SecurityID</Term>
+      <Term>ProcessItem/SecurityType</Term>
+      <Term>ProcessItem/path</Term>
+      <Term>ProcessItem/name</Term>
+      <Term>ProcessItem/arguments</Term>
+      <Term>ProcessItem/startTime</Term>
+      <Term>ProcessItem/kernelTime</Term>
+      <Term>ProcessItem/userTime</Term>
+      <Term>ProcessItem/StringList/string</Term>
+      <Term>ProcessItem/hidden</Term>
+    </param>
+  </module>
+  <module name="w32processes-handle" version="1.4.29.0" root="ProcessItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>ProcessItem/pid</Term>
+      <Term>ProcessItem/parentpid</Term>
+      <Term>ProcessItem/Username</Term>
+      <Term>ProcessItem/SecurityID</Term>
+      <Term>ProcessItem/SecurityType</Term>
+      <Term>ProcessItem/path</Term>
+      <Term>ProcessItem/name</Term>
+      <Term>ProcessItem/arguments</Term>
+      <Term>ProcessItem/startTime</Term>
+      <Term>ProcessItem/kernelTime</Term>
+      <Term>ProcessItem/userTime</Term>
+      <Term>ProcessItem/StringList/string</Term>
+      <Term>ProcessItem/hidden</Term>
+    </param>
+  </module>
+  <module name="w32eventlogs" version="1.4.30.0" root="EventLogItem">
+    <param name="eventlog" type="String" value=""></param>
+    <param name="eventlogfullpath" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>EventLogItem/EID</Term>
+      <Term>EventLogItem/log</Term>
+      <Term>EventLogItem/CorrelationActivityId</Term>
+      <Term>EventLogItem/CorrelationRelatedActivityId</Term>
+      <Term>EventLogItem/ExecutionProcessId</Term>
+      <Term>EventLogItem/ExecutionThreadId</Term>
+      <Term>EventLogItem/index</Term>
+      <Term>EventLogItem/type</Term>
+      <Term>EventLogItem/categoryNum</Term>
+      <Term>EventLogItem/genTime</Term>
+      <Term>EventLogItem/writeTime</Term>
+      <Term>EventLogItem/reserved</Term>
+      <Term>EventLogItem/source</Term>
+      <Term>EventLogItem/machine</Term>
+      <Term>EventLogItem/user</Term>
+      <Term>EventLogItem/category</Term>
+      <Term>EventLogItem/message</Term>
+      <Term>EventLogItem/unformattedMessage/string</Term>
+      <Term>EventLogItem/blob</Term>
+    </param>
+  </module>
+  <module name="w32registryapi" version="1.4.29.0" root="RegistryItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Path Regex" type="String" value=""></param>
+    <param name="Value Regex" type="String" value=""></param>
+    <param name="Type" type="String" value=""></param>
+    <param name="Depth" type="Int32" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>RegistryItem/Path</Term>
+      <Term>RegistryItem/Type</Term>
+      <Term>RegistryItem/Modified</Term>
+      <Term>RegistryItem/NumSubKeys</Term>
+      <Term>RegistryItem/NumValues</Term>
+      <Term>RegistryItem/Hive</Term>
+      <Term>RegistryItem/KeyPath</Term>
+      <Term>RegistryItem/Username</Term>
+	  <Term>RegistryItem/SecurityID</Term>
+      <Term>RegistryItem/ValueName</Term>
+      <Term>RegistryItem/Text</Term>
+      <Term>RegistryItem/ReportedLengthInBytes</Term>
+      <Term>RegistryItem/Value</Term>
+    </param>
+  </module>
+  <module name="w32registryraw" version="1.4.29.0" root="RegistryItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Path Regex" type="String" value=""></param>
+    <param name="Value Regex" type="String" value=""></param>
+    <param name="Type" type="String" value=""></param>
+    <param name="Depth" type="Int32" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>RegistryItem/Path</Term>
+      <Term>RegistryItem/Type</Term>
+      <Term>RegistryItem/Modified</Term>
+      <Term>RegistryItem/NumSubKeys</Term>
+      <Term>RegistryItem/NumValues</Term>
+      <Term>RegistryItem/Hive</Term>
+      <Term>RegistryItem/KeyPath</Term>
+      <Term>RegistryItem/Username</Term>
+	  <Term>RegistryItem/SecurityID</Term>
+      <Term>RegistryItem/ValueName</Term>
+      <Term>RegistryItem/Text</Term>
+      <Term>RegistryItem/ReportedLengthInBytes</Term>
+      <Term>RegistryItem/Value</Term>
+	  <Term>RegistryItem/detectedAnomaly</Term>
+    </param>
+  </module>
+  <module name="w32hivelist" version="1.4.29.0" root="HiveItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>HiveItem/Name</Term>
+      <Term>HiveItem/Path</Term>
+    </param>
+  </module>
+  <module name="w32apifiles" version="1.4.30.0" root="FileItem">
+    <param name="Path" type="String" value="%systemdrive%">
+      <Term>FileItem/DevicePath</Term>
+      <Term>FileItem/FullPath</Term>
+      <Term>FileItem/Drive</Term>
+      <Term>FileItem/FilePath</Term>
+      <Term>FileItem/FileName</Term>
+      <Term>FileItem/FileExtension</Term>
+      <Term>FileItem/SizeInBytes</Term>
+      <Term>FileItem/Created</Term>
+      <Term>FileItem/Modified</Term>
+      <Term>FileItem/Accessed</Term>
+      <Term>FileItem/Changed</Term>
+      <Term>FileItem/FilenameCreated</Term>
+      <Term>FileItem/FilenameModified</Term>
+      <Term>FileItem/FilenameAccessed</Term>
+      <Term>FileItem/FilenameChanged</Term>
+      <Term>FileItem/FileAttributes</Term>
+      <Term>FileItem/Username</Term>
+      <Term>FileItem/SecurityID</Term>
+      <Term>FileItem/SecurityType</Term>
+      <Term>FileItem/INode</Term>
+      <Term>FileItem/StreamList/Stream/SizeInBytes</Term>
+      <Term>FileItem/StreamList/Stream/Name</Term>
+    </param>
+    <param name="Path Regex" type="String" value=""></param>
+    <param name="Depth" type="Int32" value=""></param>
+    <param name="MD5" type="Boolean" value="true">
+      <Term>FileItem/Md5sum</Term>
+      <Term>FileItem/StreamList/Stream/Md5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>FileItem/Sha1sum</Term>
+      <Term>FileItem/StreamList/Stream/Sha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>FileItem/Sha256sum</Term>
+      <Term>FileItem/StreamList/Stream/Sha256sum</Term>
+    </param>
+    <param name="Analyze Entropy" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/Type</Term>
+      <Term>FileItem/PEInfo/Subsystem</Term>
+      <Term>FileItem/PEInfo/BaseAddress</Term>
+      <Term>FileItem/PEInfo/PETimeStamp</Term>
+      <Term>FileItem/PEInfo/PEChecksum/PEFileRaw</Term>
+      <Term>FileItem/PEInfo/PEChecksum/PEFileAPI</Term>
+      <Term>FileItem/PEInfo/PEChecksum/PEComputedAPI</Term>
+      <Term>FileItem/PEInfo/ExtraneousBytes</Term>
+	  <Term>FileItem/PEInfo/Sections/NumberOfSections</Term>
+      <Term>FileItem/PEInfo/Sections/Section/Name</Term>
+      <Term>FileItem/PEInfo/Sections/Section/Type</Term>
+      <Term>FileItem/PEInfo/Sections/Section/SizeInBytes</Term>
+      <Term>FileItem/PEInfo/Sections/Section/DetectedCharacteristics</Term>
+      <Term>FileItem/PEInfo/Sections/Section/Entropy/CurveData/float</Term>
+      <Term>FileItem/PeakEntropy</Term>
+      <Term>FileItem/PeakCodeEntropy</Term>
+    </param>
+    <param name="Enumerate Imports" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/ImportedModules/Module/Name</Term>
+      <Term>FileItem/PEInfo/ImportedModules/Module/ImportedFunctions/string</Term>
+    </param>
+    <param name="Enumerate Exports" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/Exports/ExportsTimeStamp</Term>
+      <Term>FileItem/PEInfo/Exports/NumberOfFunctions</Term>
+      <Term>FileItem/PEInfo/Exports/NumberOfNames</Term>
+	  <Term>FileItem/PEInfo/Exports/DllName</Term>
+      <Term>FileItem/PEInfo/Exports/ExportedFunctions/string</Term>
+    </param>
+    <param name="Analyze File Anomalies" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/DetectedAnomalies/string</Term>
+      <Term>FileItem/PEInfo/DetectedEntryPointSignature/Name</Term>
+      <Term>FileItem/PEInfo/DetectedEntryPointSignature/Type</Term>
+      <Term>FileItem/PEInfo/Sections/Section/DetectedSignatureKeys/string</Term>
+    </param>
+    <param name="Scan Entry Point Distance" type="Int32" value="">
+      <Term>FileItem/PEInfo/EpJumpCodes/Depth</Term>
+      <Term>FileItem/PEInfo/EpJumpCodes/Opcodes</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/DigitalSignature/SignatureExists</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/SignatureVerified</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/Description</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/CertificateIssuer</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/CertificateSubject</Term>
+    </param>
+    <param name="Minimum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Maximum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Filter MD5" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA1" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA256" type="ArrayOfString" value=""></param>
+    <param name="Content Regex" type="ArrayOfString" value=""></param>
+    <param name="AND Operator" type="Boolean" value=""></param>
+    <param name="Strings" type="Boolean" value="">
+      <Term>FileItem/StringList/string</Term>
+	</param>
+    <param name="shortest matched string" type="Int32" value=""></param>
+    <param name="Include Files" type="Boolean" value="true"></param>
+    <param name="Include Directories" type="Boolean" value="true"></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param name="Get Resources" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Name</Term>
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Type</Term>
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Size</Term>
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Language</Term>
+    </param>
+    <param name="Get Resource Data" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Data</Term>
+    </param>
+    <param name="Get Version Info" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/Language</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/ProductName</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/ProductVersion</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/Comments</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/CompanyName</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/FileDescription</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/FileVersion</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/InternalName</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/LegalCopyright</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/OriginalFilename</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/LegalTrademarks</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/PrivateBuild</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/SpecialBuild</Term>
+    </param>
+    <param name="Exclude Resource Types" type="ArrayOfString" value=""></param>
+    <param>
+			<Term>FileItem/DevicePath</Term>
+			<Term>FileItem/FullPath</Term>
+			<Term>FileItem/Drive</Term>
+			<Term>FileItem/FilePath</Term>
+			<Term>FileItem/FileName</Term>
+			<Term>FileItem/FileExtension</Term>
+			<Term>FileItem/SizeInBytes</Term>
+			<Term>FileItem/Created</Term>
+			<Term>FileItem/Modified</Term>
+			<Term>FileItem/Accessed</Term>
+			<Term>FileItem/Changed</Term>
+			<Term>FileItem/FilenameCreated</Term>
+			<Term>FileItem/FilenameModified</Term>
+			<Term>FileItem/FilenameAccessed</Term>
+			<Term>FileItem/FilenameChanged</Term>
+			<Term>FileItem/FileAttributes</Term>
+			<Term>FileItem/Username</Term>
+			<Term>FileItem/SecurityID</Term>
+			<Term>FileItem/SecurityType</Term>
+			<Term>FileItem/INode</Term>
+			<Term>FileItem/detectedAnomaly</Term>
+			<Term>FileItem/StreamList/Stream/SizeInBytes</Term>
+			<Term>FileItem/StreamList/Stream/Name</Term>
+    </param>
+  </module>
+  <module name="w32apifile-acquisition" version="1.4.29.0" root="EmptyStubItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Filename" type="String" value=""></param>
+    <param name="Preserve Times" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32rawfiles" version="1.4.30.0" root="FileItem">
+    <param name="Path" type="String" value="%systemdrive%">
+      <Term>FileItem/DevicePath</Term>
+      <Term>FileItem/FullPath</Term>
+      <Term>FileItem/Drive</Term>
+      <Term>FileItem/FilePath</Term>
+      <Term>FileItem/FileName</Term>
+      <Term>FileItem/FileExtension</Term>
+      <Term>FileItem/SizeInBytes</Term>
+      <Term>FileItem/Created</Term>
+      <Term>FileItem/Modified</Term>
+      <Term>FileItem/Accessed</Term>
+      <Term>FileItem/Changed</Term>
+      <Term>FileItem/FilenameCreated</Term>
+      <Term>FileItem/FilenameModified</Term>
+      <Term>FileItem/FilenameAccessed</Term>
+      <Term>FileItem/FilenameChanged</Term>
+      <Term>FileItem/FileAttributes</Term>
+      <Term>FileItem/Username</Term>
+      <Term>FileItem/SecurityID</Term>
+      <Term>FileItem/SecurityType</Term>
+      <Term>FileItem/INode</Term>
+      <Term>FileItem/StreamList/Stream/SizeInBytes</Term>
+      <Term>FileItem/StreamList/Stream/Name</Term>
+    </param>
+    <param name="Path Regex" type="String" value=""></param>
+    <param name="Depth" type="Int32" value=""></param>
+    <param name="MD5" type="Boolean" value="true">
+      <Term>FileItem/Md5sum</Term>
+      <Term>FileItem/StreamList/Stream/Md5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>FileItem/Sha1sum</Term>
+      <Term>FileItem/StreamList/Stream/Sha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>FileItem/Sha256sum</Term>
+      <Term>FileItem/StreamList/Stream/Sha256sum</Term>
+    </param>
+    <param name="Analyze Entropy" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/Type</Term>
+      <Term>FileItem/PEInfo/Subsystem</Term>
+      <Term>FileItem/PEInfo/BaseAddress</Term>
+      <Term>FileItem/PEInfo/PETimeStamp</Term>
+      <Term>FileItem/PEInfo/PEChecksum/PEFileRaw</Term>
+      <Term>FileItem/PEInfo/PEChecksum/PEFileAPI</Term>
+      <Term>FileItem/PEInfo/PEChecksum/PEComputedAPI</Term>
+      <Term>FileItem/PEInfo/ExtraneousBytes</Term>
+	  <Term>FileItem/PEInfo/Sections/NumberOfSections</Term>
+	  <Term>FileItem/PEInfo/Sections/ActualNumberOfSections</Term>
+      <Term>FileItem/PEInfo/Sections/Section/Name</Term>
+      <Term>FileItem/PEInfo/Sections/Section/Type</Term>
+      <Term>FileItem/PEInfo/Sections/Section/SizeInBytes</Term>
+      <Term>FileItem/PEInfo/Sections/Section/DetectedCharacteristics</Term>
+      <Term>FileItem/PEInfo/Sections/Section/Entropy/CurveData/float</Term>
+      <Term>FileItem/PeakEntropy</Term>
+      <Term>FileItem/PeakCodeEntropy</Term>
+    </param>
+    <param name="Enumerate Imports" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/ImportedModules/Module/Name</Term>
+      <Term>FileItem/PEInfo/ImportedModules/Module/ImportedFunctions/string</Term>
+    </param>
+    <param name="Enumerate Exports" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/Exports/ExportsTimeStamp</Term>
+      <Term>FileItem/PEInfo/Exports/NumberOfFunctions</Term>
+      <Term>FileItem/PEInfo/Exports/NumberOfNames</Term>
+	  <Term>FileItem/PEInfo/Exports/DllName</Term>
+      <Term>FileItem/PEInfo/Exports/ExportedFunctions/string</Term>
+    </param>
+    <param name="Analyze File Anomalies" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/DetectedAnomalies/string</Term>
+      <Term>FileItem/PEInfo/DetectedEntryPointSignature/Name</Term>
+      <Term>FileItem/PEInfo/DetectedEntryPointSignature/Type</Term>
+      <Term>FileItem/PEInfo/Sections/Section/DetectedSignatureKeys/string</Term>
+    </param>
+    <param name="Scan Entry Point Distance" type="Int32" value="">
+      <Term>FileItem/PEInfo/EpJumpCodes/Depth</Term>
+      <Term>FileItem/PEInfo/EpJumpCodes/Opcodes</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/DigitalSignature/SignatureExists</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/SignatureVerified</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/Description</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/CertificateIssuer</Term>
+      <Term>FileItem/PEInfo/DigitalSignature/CertificateSubject</Term>
+    </param>
+    <param name="Minimum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Maximum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Active Files" type="Boolean" value=""></param>
+    <param name="Deleted Files" type="Boolean" value=""></param>
+    <param name="Filter MD5" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA1" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA256" type="ArrayOfString" value=""></param>
+    <param name="Content Regex" type="ArrayOfString" value=""></param>
+    <param name="AND Operator" type="Boolean" value=""></param>
+    <param name="Strings" type="Boolean" value="true">
+      <Term>FileItem/StringList/string</Term>
+    </param>
+    <param name="shortest matched string" type="Int32" value=""></param>
+    <param name="Include Files" type="Boolean" value=""></param>
+    <param name="Include Directories" type="Boolean" value="true"></param>
+    <param name="Prevent Hibernation" type="Boolean" value="true"></param>
+    <param name="Get Resources" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Name</Term>
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Type</Term>
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Size</Term>
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Language</Term>
+    </param>
+    <param name="Get Resource Data" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Data</Term>
+    </param>
+    <param name="Get Version Info" type="Boolean" value="true">
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/Language</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/ProductName</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/ProductVersion</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/Comments</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/CompanyName</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/FileDescription</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/FileVersion</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/InternalName</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/LegalCopyright</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/OriginalFilename</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/LegalTrademarks</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/PrivateBuild</Term>
+      <Term>FileItem/PEInfo/VersionInfoList/VersionInfoItem/SpecialBuild</Term>
+    </param>
+    <param name="Exclude Resource Types" type="ArrayOfString" value=""></param>
+    <param>
+			<Term>FileItem/DevicePath</Term>
+			<Term>FileItem/FullPath</Term>
+			<Term>FileItem/Drive</Term>
+			<Term>FileItem/FilePath</Term>
+			<Term>FileItem/FileName</Term>
+			<Term>FileItem/FileExtension</Term>
+			<Term>FileItem/SizeInBytes</Term>
+			<Term>FileItem/Created</Term>
+			<Term>FileItem/Modified</Term>
+			<Term>FileItem/Accessed</Term>
+			<Term>FileItem/Changed</Term>
+			<Term>FileItem/FilenameCreated</Term>
+			<Term>FileItem/FilenameModified</Term>
+			<Term>FileItem/FilenameAccessed</Term>
+			<Term>FileItem/FilenameChanged</Term>
+			<Term>FileItem/FileAttributes</Term>
+			<Term>FileItem/Username</Term>
+			<Term>FileItem/SecurityID</Term>
+			<Term>FileItem/SecurityType</Term>
+			<Term>FileItem/INode</Term>
+			<Term>FileItem/detectedAnomaly</Term>
+			<Term>FileItem/StreamList/Stream/SizeInBytes</Term>
+			<Term>FileItem/StreamList/Stream/Name</Term>
+    </param>
+  </module>
+  <module name="w32rawfile-acquisition" version="1.4.29.0" root="EmptyStubItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Filename" type="String" value=""></param>
+    <param name="Inode" type="UInt64" value=""></param>
+    <param name="Deleted" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32volumes" version="1.4.29.0" root="VolumeItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>VolumeItem/VolumeName</Term>
+      <Term>VolumeItem/DevicePath</Term>
+      <Term>VolumeItem/DriveLetter</Term>
+      <Term>VolumeItem/Type</Term>
+      <Term>VolumeItem/Name</Term>
+      <Term>VolumeItem/SerialNumber</Term>
+      <Term>VolumeItem/FileSystemFlags</Term>
+      <Term>VolumeItem/FileSystemName</Term>
+      <Term>VolumeItem/ActualAvailableAllocationUnits</Term>
+      <Term>VolumeItem/TotalAllocationUnits</Term>
+      <Term>VolumeItem/BytesPerSector</Term>
+      <Term>VolumeItem/SectorsPerAllocationUnit</Term>
+      <Term>VolumeItem/CreationTime</Term>
+      <Term>VolumeItem/IsMounted</Term>
+    </param>
+  </module>
+  <module name="w32disks" version="1.4.29.0" root="DiskItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>DiskItem/DiskName</Term>
+      <Term>DiskItem/DiskSize</Term>
+      <Term>DiskItem/PartitionList/Partition/PartitionNumber</Term>
+      <Term>DiskItem/PartitionList/Partition/PartitionOffset</Term>
+      <Term>DiskItem/PartitionList/Partition/PartitionLength</Term>
+      <Term>DiskItem/PartitionList/Partition/PartitionType</Term>
+    </param>
+  </module>
+  <module name="w32disk-acquisition" version="1.4.29.0" root="EmptyStubItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Filename" type="String" value=""></param>
+    <param name="offset" type="UInt64" value=""></param>
+    <param name="size" type="UInt64" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32multifileraw-acquisition" version="1.4.30.0" root="EmptyStubItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Path Regex" type="String" value=""></param>
+    <param name="Depth" type="Int32" value=""></param>
+    <param name="Minimum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Maximum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Active Files" type="Boolean" value=""></param>
+    <param name="Deleted Files" type="Boolean" value=""></param>
+    <param name="Filter MD5" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA1" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA256" type="ArrayOfString" value=""></param>
+    <param name="Content Regex" type="ArrayOfString" value=""></param>
+    <param name="AND Operator" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32multifileapi-acquisition" version="1.4.30.0" root="EmptyStubItem">
+    <param name="Path" type="String" value=""></param>
+    <param name="Path Regex" type="String" value=""></param>
+    <param name="Depth" type="Int32" value=""></param>
+    <param name="Minimum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Maximum Sizes" type="ArrayOfString" value=""></param>
+    <param name="Filter MD5" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA1" type="ArrayOfString" value=""></param>
+    <param name="Filter SHA256" type="ArrayOfString" value=""></param>
+    <param name="Content Regex" type="ArrayOfString" value=""></param>
+    <param name="AND Operator" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32memory-acquisition" version="1.4.29.0" root="EmptyStubItem">
+    <param name="offset" type="UInt64" value=""></param>
+    <param name="size" type="UInt64" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32processes-memory" version="1.4.31.0" root="ProcessItem">
+    <param name="pid" type="UInt32" value=""></param>
+    <param name="process name" type="String" value="true"></param>
+    <param name="handles" type="Boolean" value="true">
+      <Term>ProcessItem/HandleList/Handle/Index</Term>
+      <Term>ProcessItem/HandleList/Handle/AccessMask</Term>
+      <Term>ProcessItem/HandleList/Handle/ObjectAddress</Term>
+      <Term>ProcessItem/HandleList/Handle/HandleCount</Term>
+      <Term>ProcessItem/HandleList/Handle/PointerCount</Term>
+      <Term>ProcessItem/HandleList/Handle/Type</Term>
+      <Term>ProcessItem/HandleList/Handle/Name</Term>
+    </param>
+    <param name="sections" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Type</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Subsystem</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/BaseAddress</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/PETimeStamp</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/PEChecksum/PEFileRaw</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/PEChecksum/PEFileAPI</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/PEChecksum/PEComputedAPI</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/ExtraneousBytes</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/Name</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/Type</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/SizeInBytes</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/EpJumpCodes/Depth</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/EpJumpCodes/Opcodes</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DetectedAnomalies/string</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DetectedEntryPointSignature/Name</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DetectedEntryPointSignature/Type</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/DetectedCharacteristics</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/Entropy/CurveData/float</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Sections/Section/DetectedSignatureKeys/string</Term>
+      <Term>ProcessItem/SectionList/MemorySection/Protection</Term>
+      <Term>ProcessItem/SectionList/MemorySection/RegionStart</Term>
+      <Term>ProcessItem/SectionList/MemorySection/RegionSize</Term>
+      <Term>ProcessItem/SectionList/MemorySection/Mapped</Term>
+      <Term>ProcessItem/SectionList/MemorySection/RawFlags</Term>
+      <Term>ProcessItem/SectionList/MemorySection/Name</Term>
+    </param>
+    <param name="ports" type="Boolean" value="true">
+      <Term>ProcessItem/PortList/PortItem/pid</Term>
+      <Term>ProcessItem/PortList/PortItem/process</Term>
+      <Term>ProcessItem/PortList/PortItem/path</Term>
+      <Term>ProcessItem/PortList/PortItem/state</Term>
+      <Term>ProcessItem/PortList/PortItem/CreationTime</Term>
+      <Term>ProcessItem/PortList/PortItem/localIP</Term>
+      <Term>ProcessItem/PortList/PortItem/remoteIP</Term>
+      <Term>ProcessItem/PortList/PortItem/localPort</Term>
+      <Term>ProcessItem/PortList/PortItem/remotePort</Term>
+      <Term>ProcessItem/PortList/PortItem/protocol</Term>
+    </param>
+    <param name="enumerate imports" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/ImportedModules/Module/Name</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/ImportedModules/Module/ImportedFunctions/string</Term>
+    </param>
+    <param name="enumerate exports" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Exports/ExportsTimeStamp</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Exports/NumberOfFunctions</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Exports/NumberOfNames</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/Exports/ExportedFunctions/string</Term>
+    </param>
+    <param name="Preserve Times" type="Boolean" value=""></param>
+    <param name="MD5" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/Md5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/Sha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/Sha256sum</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/DigitalSignature/SignatureExists</Term>
+      <Term>ProcessItem/SectionList/MemorySection/DigitalSignature/SignatureVerified</Term>
+      <Term>ProcessItem/SectionList/MemorySection/DigitalSignature/Description</Term>
+      <Term>ProcessItem/SectionList/MemorySection/DigitalSignature/CertificateIssuer</Term>
+      <Term>ProcessItem/SectionList/MemorySection/DigitalSignature/CertificateSubject</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DigitalSignature/SignatureExists</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DigitalSignature/SignatureVerified</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DigitalSignature/Description</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DigitalSignature/CertificateIssuer</Term>
+      <Term>ProcessItem/SectionList/MemorySection/PEInfo/DigitalSignature/CertificateSubject</Term>
+    </param>
+    <param name="raw mode" type="Boolean" value=""></param>
+    <param name="detect injected dlls" type="Boolean" value="true">
+      <Term>ProcessItem/SectionList/MemorySection/Injected</Term>
+    </param>
+    <param name="strings" type="Boolean" value="true">
+      <Term>ProcessItem/StringList/string</Term>
+    </param>
+    <param name="shortest matched string" type="Int32" value=""></param>
+    <param name="memory file" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>ProcessItem/pid</Term>
+      <Term>ProcessItem/parentpid</Term>
+      <Term>ProcessItem/hidden</Term>
+      <Term>ProcessItem/Username</Term>
+      <Term>ProcessItem/SecurityID</Term>
+      <Term>ProcessItem/SecurityType</Term>
+      <Term>ProcessItem/path</Term>
+      <Term>ProcessItem/name</Term>
+      <Term>ProcessItem/arguments</Term>
+      <Term>ProcessItem/startTime</Term>
+      <Term>ProcessItem/kernelTime</Term>
+      <Term>ProcessItem/userTime</Term>
+    </param>
+  </module>
+  <module name="w32drivers-signature" version="1.4.30.0" root="DriverItem">
+    <param name="memory file" type="String" value=""></param>
+    <param name="enumerate imports" type="Boolean" value="true">
+      <Term>DriverItem/PEInfo/ImportedModules/Module/Name</Term>
+      <Term>DriverItem/PEInfo/ImportedModules/Module/ImportedFunctions/string</Term>
+    </param>
+    <param name="enumerate exports" type="Boolean" value="true">
+      <Term>DriverItem/PEInfo/Exports/ExportsTimeStamp</Term>
+      <Term>DriverItem/PEInfo/Exports/NumberOfFunctions</Term>
+      <Term>DriverItem/PEInfo/Exports/NumberOfNames</Term>
+      <Term>DriverItem/PEInfo/Exports/ExportedFunctions/string</Term>
+    </param>
+    <param name="strings" type="Boolean" value="true">
+      <Term>DriverItem/StringList/string</Term>
+    </param>
+    <param name="shortest matched string" type="Int32" value=""></param>
+    <param name="Preserve Times" type="Boolean" value=""></param>
+    <param name="MD5" type="Boolean" value="true">
+      <Term>DriverItem/Md5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>DriverItem/Sha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>DriverItem/Sha256sum</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>DriverItem/SignatureExists</Term>
+      <Term>DriverItem/SignatureVerified</Term>
+      <Term>DriverItem/SignatureDescription</Term>
+      <Term>DriverItem/CertificateSubject</Term>
+      <Term>DriverItem/CertificateIssuer</Term>
+      <Term>DriverItem/PEInfo/DigitalSignature/SignatureExists</Term>
+      <Term>DriverItem/PEInfo/DigitalSignature/SignatureVerified</Term>
+      <Term>DriverItem/PEInfo/DigitalSignature/Description</Term>
+      <Term>DriverItem/PEInfo/DigitalSignature/CertificateIssuer</Term>
+      <Term>DriverItem/PEInfo/DigitalSignature/CertificateSubject</Term>
+    </param>
+    <param name="raw mode" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>DriverItem/DriverObjectAddress</Term>
+      <Term>DriverItem/ImageSize</Term>
+      <Term>DriverItem/ImageBase</Term>
+      <Term>DriverItem/DriverName</Term>
+      <Term>DriverItem/DriverInit</Term>
+      <Term>DriverItem/DriverStartIo</Term>
+      <Term>DriverItem/DriverUnload</Term>
+      <Term>DriverItem/DeviceItem/DeviceObject</Term>
+      <Term>DriverItem/DeviceItem/DeviceName</Term>
+      <Term>DriverItem/DeviceItem/DriverName</Term>
+      <Term>DriverItem/DeviceItem/AttachedDeviceObject</Term>
+      <Term>DriverItem/DeviceItem/AttachedDeviceName</Term>
+      <Term>DriverItem/DeviceItem/AttachedDriverObject</Term>
+      <Term>DriverItem/DeviceItem/AttachedDriverName</Term>
+      <Term>DriverItem/DeviceItem/AttachedToDeviceObject</Term>
+      <Term>DriverItem/DeviceItem/AttachedToDeviceName</Term>
+      <Term>DriverItem/DeviceItem/AttachedToDriverObject</Term>
+      <Term>DriverItem/DeviceItem/AttachedToDriverName</Term>
+      <Term>DriverItem/IRP_MJ_CREATE</Term>
+      <Term>DriverItem/IRP_MJ_CREATE_NAMED_PIPE</Term>
+      <Term>DriverItem/IRP_MJ_CLOSE</Term>
+      <Term>DriverItem/IRP_MJ_WRITE</Term>
+      <Term>DriverItem/IRP_MJ_READ</Term>
+      <Term>DriverItem/IRP_MJ_QUERY_INFORMATION</Term>
+      <Term>DriverItem/IRP_MJ_SET_INFORMATION</Term>
+      <Term>DriverItem/IRP_MJ_QUERY_EA</Term>
+      <Term>DriverItem/IRP_MJ_SET_EA</Term>
+      <Term>DriverItem/IRP_MJ_FLUSH_BUFFERS</Term>
+      <Term>DriverItem/IRP_MJ_QUERY_VOLUME_INFORMATION</Term>
+      <Term>DriverItem/IRP_MJ_SET_VOLUME_INFORMATION</Term>
+      <Term>DriverItem/IRP_MJ_DIRECTORY_CONTROL</Term>
+      <Term>DriverItem/IRP_MJ_FILE_SYSTEM_CONTROL</Term>
+      <Term>DriverItem/IRP_MJ_DEVICE_CONTROL</Term>
+      <Term>DriverItem/IRP_MJ_INTERNAL_DEVICE_CONTROL</Term>
+      <Term>DriverItem/IRP_MJ_SHUTDOWN</Term>
+      <Term>DriverItem/IRP_MJ_LOCK_CONTROL</Term>
+      <Term>DriverItem/IRP_MJ_CLEANUP</Term>
+      <Term>DriverItem/IRP_MJ_CREATE_MAILSLOT</Term>
+      <Term>DriverItem/IRP_MJ_QUERY_SECURITY</Term>
+      <Term>DriverItem/IRP_MJ_SET_SECURITY</Term>
+      <Term>DriverItem/IRP_MJ_POWER</Term>
+      <Term>DriverItem/IRP_MJ_SYSTEM_CONTROL</Term>
+      <Term>DriverItem/IRP_MJ_DEVICE_CHANGE</Term>
+      <Term>DriverItem/IRP_MJ_QUERY_QUOTA</Term>
+      <Term>DriverItem/IRP_MJ_SET_QUOTA</Term>
+      <Term>DriverItem/IRP_MJ_PNP</Term>
+      <Term>DriverItem/PEInfo/Type</Term>
+      <Term>DriverItem/PEInfo/Subsystem</Term>
+      <Term>DriverItem/PEInfo/BaseAddress</Term>
+      <Term>DriverItem/PEInfo/PETimeStamp</Term>
+      <Term>DriverItem/PEInfo/PEChecksum/PEFileRaw</Term>
+      <Term>DriverItem/PEInfo/PEChecksum/PEFileAPI</Term>
+      <Term>DriverItem/PEInfo/PEChecksum/PEComputedAPI</Term>
+      <Term>DriverItem/PEInfo/ExtraneousBytes</Term>
+      <Term>DriverItem/PEInfo/EpJumpCodes/Depth</Term>
+      <Term>DriverItem/PEInfo/EpJumpCodes/Opcodes</Term>
+      <Term>DriverItem/PEInfo/DetectedAnomalies/string</Term>
+      <Term>DriverItem/PEInfo/DetectedEntryPointSignature/Name</Term>
+      <Term>DriverItem/PEInfo/DetectedEntryPointSignature/Type</Term>
+      <Term>DriverItem/PEInfo/Sections/Section/Name</Term>
+      <Term>DriverItem/PEInfo/Sections/Section/Type</Term>
+      <Term>DriverItem/PEInfo/Sections/Section/SizeInBytes</Term>
+      <Term>DriverItem/PEInfo/Sections/Section/DetectedCharacteristics</Term>
+      <Term>DriverItem/PEInfo/Sections/Section/Entropy/CurveData/float</Term>
+      <Term>DriverItem/PEInfo/Sections/Section/DetectedSignatureKeys/string</Term>
+    </param>
+  </module>
+  <module name="w32drivers-modulelist" version="1.4.30.0" root="ModuleItem">
+    <param name="memory file" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>ModuleItem/ModuleAddress</Term>
+      <Term>ModuleItem/ModuleInit</Term>
+      <Term>ModuleItem/ModuleBase</Term>
+      <Term>ModuleItem/ModuleSize</Term>
+      <Term>ModuleItem/ModuleName</Term>
+      <Term>ModuleItem/ModulePath</Term>
+    </param>
+  </module>
+  <module name="w32kernel-hookdetection" version="1.4.30.0" root="HookItem">
+    <param name="idt" type="Boolean" value=""></param>
+    <param name="ssdt_index" type="Boolean" value=""></param>
+    <param name="ssdt_inline" type="Boolean" value=""></param>
+    <param name="drivers" type="Boolean" value=""></param>
+    <param name="memory file" type="String" value=""></param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>HookItem/DigitalSignatureHooking/SignatureExists</Term>
+      <Term>HookItem/DigitalSignatureHooking/SignatureVerified</Term>
+      <Term>HookItem/DigitalSignatureHooking/Description</Term>
+      <Term>HookItem/DigitalSignatureHooking/CertificateIssuer</Term>
+      <Term>HookItem/DigitalSignatureHooking/CertificateSubject</Term>
+      <Term>HookItem/DigitalSignatureHooked/SignatureExists</Term>
+      <Term>HookItem/DigitalSignatureHooked/SignatureVerified</Term>
+      <Term>HookItem/DigitalSignatureHooked/Description</Term>
+      <Term>HookItem/DigitalSignatureHooked/CertificateIssuer</Term>
+      <Term>HookItem/DigitalSignatureHooked/CertificateSubject</Term>
+    </param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>HookItem/HookDescription</Term>
+      <Term>HookItem/HookedFunction</Term>
+      <Term>HookItem/HookedModule</Term>
+      <Term>HookItem/HookingModule</Term>
+      <Term>HookItem/HookingAddress</Term>
+    </param>
+  </module>
+  <module name="w32processes-memoryacquire" version="1.4.31.0" root="EmptyStubItem">
+    <param name="pid" type="UInt32" value=""></param>
+    <param name="process name" type="String" value=""></param>
+    <param name="memory file" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32driver-memoryacquire" version="1.4.30.0" root="EmptyStubItem">
+    <param name="driver name" type="String" value=""></param>
+    <param name="memory file" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32prefetch" version="1.4.43.0" root="PrefetchItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>PrefetchItem/FullPath</Term>
+	  <Term>PrefetchItem/Created</Term>
+      <Term>PrefetchItem/SizeInBytes</Term>
+	  <Term>PrefetchItem/PrefetchHash</Term>
+	  <Term>PrefetchItem/ReportedSizeInBytes</Term>
+	  <Term>PrefetchItem/ApplicationFileName</Term>
+	  <Term>PrefetchItem/LastRun</Term>
+	  <Term>PrefetchItem/TimesExecuted</Term>
+	  <Term>PrefetchItem/AccessedFileList/AccessedFile</Term>
+	  <Term>PrefetchItem/ApplicationFullPath</Term>
+	  <Term>PrefetchItem/VolumeList/VolumeItem/DevicePath</Term>
+	  <Term>PrefetchItem/VolumeList/VolumeItem/CreationTime</Term>
+	  <Term>PrefetchItem/VolumeList/VolumeItem/SerialNumber</Term>
+    </param>
+  </module>
+  <module name="w32network-arp" version="1.4.34.0" root="ArpEntryItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+	  <Term>ArpEntryItem/Interface</Term>
+	  <Term>ArpEntryItem/PhysicalAddress</Term>
+	  <Term>ArpEntryItem/IPv6Address</Term>
+	  <Term>ArpEntryItem/IPv4Address</Term>
+	  <Term>ArpEntryItem/CacheType</Term>
+	  <Term>ArpEntryItem/InterfaceType</Term>
+	  <Term>ArpEntryItem/State</Term>
+	  <Term>ArpEntryItem/IsRouter</Term>
+	  <Term>ArpEntryItem/LastReachable</Term>
+	  <Term>ArpEntryItem/LastUnreachable</Term>
+	</param>
+  </module>
+  <module name="w32network-dns" version="1.4.34.0" root="DnsEntryItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+	  <Term>DnsEntryItem/Host</Term>
+	  <Term>DnsEntryItem/RecordName</Term>
+	  <Term>DnsEntryItem/RecordType</Term>
+	  <Term>DnsEntryItem/TimeToLive</Term>
+	  <Term>DnsEntryItem/Flags</Term>
+	  <Term>DnsEntryItem/DataLength</Term>
+	  <Term>DnsEntryItem/RecordData/Host</Term>
+	  <Term>DnsEntryItem/RecordData/IPv4Address</Term>
+	  <Term>DnsEntryItem/RecordData/PrimaryServerName</Term>
+	  <Term>DnsEntryItem/RecordData/AdministratorName</Term>
+	  <Term>DnsEntryItem/RecordData/SerialNumber</Term>
+	  <Term>DnsEntryItem/RecordData/Refresh</Term>
+	  <Term>DnsEntryItem/RecordData/Retry</Term>
+	  <Term>DnsEntryItem/RecordData/Expire</Term>
+	  <Term>DnsEntryItem/RecordData/DefaultTimeToLive</Term>
+	  <Term>DnsEntryItem/RecordData/MailboxName</Term>
+	  <Term>DnsEntryItem/RecordData/MailboxErrorsName</Term>
+	  <Term>DnsEntryItem/RecordData/MxHost</Term>
+	  <Term>DnsEntryItem/RecordData/Preference</Term>
+	  <Term>DnsEntryItem/RecordData/String</Term>
+	  <Term>DnsEntryItem/RecordData/Blob</Term>
+	  <Term>DnsEntryItem/RecordData/IPv6Address</Term>
+	  <Term>DnsEntryItem/RecordData/Algorithm</Term>
+	  <Term>DnsEntryItem/RecordData/Protocol</Term>
+	  <Term>DnsEntryItem/RecordData/KeyFlags</Term>
+	  <Term>DnsEntryItem/RecordData/Signer</Term>
+	  <Term>DnsEntryItem/RecordData/TypeCovered</Term>
+	  <Term>DnsEntryItem/RecordData/LabelCount</Term>
+	  <Term>DnsEntryItem/RecordData/OriginalTimeToLive</Term>
+	  <Term>DnsEntryItem/RecordData/ExpirationDate</Term>
+	  <Term>DnsEntryItem/RecordData/DateSigned</Term>
+	  <Term>DnsEntryItem/RecordData/KeyTag</Term>
+	  <Term>DnsEntryItem/RecordData/AddressType</Term>
+	  <Term>DnsEntryItem/RecordData/ATMAddress</Term>
+	  <Term>DnsEntryItem/RecordData/NextHost</Term>
+	  <Term>DnsEntryItem/RecordData/Type</Term>
+	  <Term>DnsEntryItem/RecordData/TargetHost</Term>
+	  <Term>DnsEntryItem/RecordData/Priority</Term>
+	  <Term>DnsEntryItem/RecordData/Weight</Term>
+	  <Term>DnsEntryItem/RecordData/Port</Term>
+	  <Term>DnsEntryItem/RecordData/Order</Term>
+	  <Term>DnsEntryItem/RecordData/Services</Term>
+	  <Term>DnsEntryItem/RecordData/RegularExpression</Term>
+	  <Term>DnsEntryItem/RecordData/Replacement</Term>
+	  <Term>DnsEntryItem/RecordData/DigestType</Term>
+	  <Term>DnsEntryItem/RecordData/DigestLength</Term>
+	  <Term>DnsEntryItem/RecordData/Digest</Term>
+	  <Term>DnsEntryItem/RecordData/KeyLength</Term>
+	  <Term>DnsEntryItem/RecordData/PublicKey</Term>
+	  <Term>DnsEntryItem/RecordData/KeyName</Term>
+	  <Term>DnsEntryItem/RecordData/Key</Term>
+	  <Term>DnsEntryItem/RecordData/CreationDate</Term>
+	  <Term>DnsEntryItem/RecordData/Error</Term>
+	  <Term>DnsEntryItem/RecordData/Mode</Term>
+	  <Term>DnsEntryItem/RecordData/SignatureLength</Term>
+	  <Term>DnsEntryItem/RecordData/Signature</Term>
+	  <Term>DnsEntryItem/RecordData/FudgeTime</Term>
+	  <Term>DnsEntryItem/RecordData/OriginalXid</Term>
+	  <Term>DnsEntryItem/RecordData/MappingFlag</Term>
+	  <Term>DnsEntryItem/RecordData/WinsServerIPv4Address</Term>
+	  <Term>DnsEntryItem/RecordData/LookupTimeout</Term>
+	  <Term>DnsEntryItem/RecordData/CacheTimeout</Term>
+	  <Term>DnsEntryItem/RecordData/Bitmask</Term>
+	</param>
+  </module>
+  <module name="w32systemrestore" version="1.4.41.0" root="SystemRestoreItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+	  <Term>SystemRestoreItem/RestorePointName</Term>
+	  <Term>SystemRestoreItem/RestorePointFullPath</Term>
+	  <Term>SystemRestoreItem/RestorePointDescription</Term>
+	  <Term>SystemRestoreItem/RestorePointType</Term>
+	  <Term>SystemRestoreItem/Created</Term>
+	  <Term>SystemRestoreItem/ChangeEvent</Term>
+	  <Term>SystemRestoreItem/ChangeLogEntryFlags</Term>
+	  <Term>SystemRestoreItem/RegistryHives/String</Term>	  
+	  <Term>SystemRestoreItem/ChangeLogFileName</Term>
+	  <Term>SystemRestoreItem/ChangeLogEntrySequenceNumber</Term>
+	  <Term>SystemRestoreItem/ProcessName</Term>
+	  <Term>SystemRestoreItem/ChangeLogEntryType</Term>
+	  <Term>SystemRestoreItem/FileAttributes</Term>
+	  <Term>SystemRestoreItem/AclChangeUsername</Term>
+	  <Term>SystemRestoreItem/AclChangeSecurityID</Term>
+	  <Term>SystemRestoreItem/DebugInfoProcessId</Term>
+	  <Term>SystemRestoreItem/DebugInfoThreadId</Term>
+	  <Term>SystemRestoreItem/DebugInfoProcessName</Term>
+	  <Term>SystemRestoreItem/DebugInfoTimeStamp</Term>
+	  <Term>SystemRestoreItem/OriginalVolumePath</Term>
+	  <Term>SystemRestoreItem/OriginalShortFileName</Term>
+	  <Term>SystemRestoreItem/OriginalFileName</Term>
+	  <Term>SystemRestoreItem/NewFileName</Term>
+	  <Term>SystemRestoreItem/BackupFileName</Term>
+	</param>
+  </module>
+  <module name="w32network-route" version="1.4.34.0" root="RouteEntryItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+	  <Term>RouteEntryItem/IsIPv6</Term>
+	  <Term>RouteEntryItem/Interface</Term>
+	  <Term>RouteEntryItem/Destination</Term>
+	  <Term>RouteEntryItem/Gateway</Term>
+	  <Term>RouteEntryItem/Netmask</Term>
+	  <Term>RouteEntryItem/RouteType</Term>
+	  <Term>RouteEntryItem/Protocol</Term>
+	  <Term>RouteEntryItem/ValidLifetime</Term>
+	  <Term>RouteEntryItem/PreferredLifetime</Term>
+	  <Term>RouteEntryItem/RouteAge</Term>
+	  <Term>RouteEntryItem/Metric</Term>
+	  <Term>RouteEntryItem/IsLoopback</Term>
+	  <Term>RouteEntryItem/IsAutoconfigureAddress</Term>
+	  <Term>RouteEntryItem/IsPublish</Term>
+	  <Term>RouteEntryItem/IsImmortal</Term>
+	  <Term>RouteEntryItem/Origin</Term>
+	</param>
+  </module>
+  <module name="urlhistory" version="1.4.29.0" root="UrlHistoryItem">
+    <param name="TargetBrowser" type="String" value=""></param>
+    <param name="PathToHistoryFiles" type="String" value=""></param>
+    <param name="GetThumbnails" type="Boolean" value=""></param>
+    <param name="GetIndexedPageContent" type="Boolean" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>UrlHistoryItem/Profile</Term>
+      <Term>UrlHistoryItem/BrowserName</Term>
+      <Term>UrlHistoryItem/BrowserVersion</Term>
+      <Term>UrlHistoryItem/Username</Term>
+      <Term>UrlHistoryItem/URL</Term>
+      <Term>UrlHistoryItem/PageTitle</Term>
+      <Term>UrlHistoryItem/HostName</Term>
+      <Term>UrlHistoryItem/Typed</Term>
+      <Term>UrlHistoryItem/Hidden</Term>
+      <Term>UrlHistoryItem/VisitFrom</Term>
+      <Term>UrlHistoryItem/VisitType</Term>
+      <Term>UrlHistoryItem/VisitCount</Term>
+      <Term>UrlHistoryItem/LastVisitDate</Term>
+      <Term>UrlHistoryItem/LastVisitDateLocal</Term>
+      <Term>UrlHistoryItem/FirstVisitDate</Term>
+      <Term>UrlHistoryItem/FirstBookmarkDate</Term>
+      <Term>UrlHistoryItem/Thumbnail</Term>
+      <Term>UrlHistoryItem/IndexedContent</Term>
+    </param>
+  </module>
+  <module name="cookiehistory" version="1.4.29.0" root="CookieHistoryItem">
+    <param name="TargetBrowser" type="String" value=""></param>
+    <param name="PathToHistoryFiles" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>CookieHistoryItem/Profile</Term>
+      <Term>CookieHistoryItem/BrowserName</Term>
+      <Term>CookieHistoryItem/BrowserVersion</Term>
+      <Term>CookieHistoryItem/Username</Term>
+      <Term>CookieHistoryItem/HostName</Term>
+      <Term>CookieHistoryItem/CookiePath</Term>
+      <Term>CookieHistoryItem/CookieName</Term>
+      <Term>CookieHistoryItem/CookieValue</Term>
+      <Term>CookieHistoryItem/FileName</Term>
+      <Term>CookieHistoryItem/FilePath</Term>
+      <Term>CookieHistoryItem/IsSecure</Term>
+      <Term>CookieHistoryItem/IsHttpOnly</Term>
+      <Term>CookieHistoryItem/CreationDate</Term>
+      <Term>CookieHistoryItem/ExpirationDate</Term>
+      <Term>CookieHistoryItem/LastAccessedDate</Term>
+      <Term>CookieHistoryItem/LastModifiedDate</Term>
+      <Term>CookieHistoryItem/CookieFlags</Term>
+    </param>
+  </module>
+  <module name="filedownloadhistory" version="1.4.29.0" root="FileDownloadHistoryItem">
+    <param name="TargetBrowser" type="String" value=""></param>
+    <param name="PathToHistoryFiles" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>FileDownloadHistoryItem/Profile</Term>
+      <Term>FileDownloadHistoryItem/BrowserName</Term>
+      <Term>FileDownloadHistoryItem/BrowserVersion</Term>
+      <Term>FileDownloadHistoryItem/Username</Term>
+      <Term>FileDownloadHistoryItem/DownloadType</Term>
+      <Term>FileDownloadHistoryItem/FileName</Term>
+      <Term>FileDownloadHistoryItem/SourceURL</Term>
+      <Term>FileDownloadHistoryItem/TargetDirectory</Term>
+      <Term>FileDownloadHistoryItem/TemporaryPath</Term>
+      <Term>FileDownloadHistoryItem/Referrer</Term>
+      <Term>FileDownloadHistoryItem/FullHttpHeader</Term>
+      <Term>FileDownloadHistoryItem/MimeType</Term>
+      <Term>FileDownloadHistoryItem/StartDate</Term>
+      <Term>FileDownloadHistoryItem/EndDate</Term>
+      <Term>FileDownloadHistoryItem/LastModifiedDate</Term>
+      <Term>FileDownloadHistoryItem/LastAccessedDate</Term>
+      <Term>FileDownloadHistoryItem/State</Term>
+      <Term>FileDownloadHistoryItem/BytesDownloaded</Term>
+      <Term>FileDownloadHistoryItem/MaxBytes</Term>
+      <Term>FileDownloadHistoryItem/AutoResume</Term>
+      <Term>FileDownloadHistoryItem/CacheFlags</Term>
+      <Term>FileDownloadHistoryItem/CacheHitCount</Term>
+      <Term>FileDownloadHistoryItem/LastCheckedDate</Term>
+      <Term>FileDownloadHistoryItem/LastCacheSynchDate</Term>
+    </param>
+  </module>
+  <module name="formhistory" version="1.4.29.0" root="FormHistoryItem">
+    <param name="TargetBrowser" type="String" value=""></param>
+    <param name="PathToHistoryFiles" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+      <Term>FormHistoryItem/Profile</Term>
+      <Term>FormHistoryItem/BrowserName</Term>
+      <Term>FormHistoryItem/BrowserVersion</Term>
+      <Term>FormHistoryItem/Username</Term>
+      <Term>FormHistoryItem/FormType</Term>
+      <Term>FormHistoryItem/FormFieldName</Term>
+      <Term>FormHistoryItem/FormFieldValue</Term>
+      <Term>FormHistoryItem/UsernameFieldName</Term>
+      <Term>FormHistoryItem/PasswordFieldName</Term>
+      <Term>FormHistoryItem/HostName</Term>
+      <Term>FormHistoryItem/HttpRealm</Term>
+      <Term>FormHistoryItem/FormSubmitURL</Term>
+      <Term>FormHistoryItem/UsernameFieldValue</Term>
+      <Term>FormHistoryItem/EncryptedPassword</Term>
+      <Term>FormHistoryItem/EncryptionType</Term>
+      <Term>FormHistoryItem/FirstUsedDate</Term>
+      <Term>FormHistoryItem/LastUsedDate</Term>
+      <Term>FormHistoryItem/CreationDate</Term>
+      <Term>FormHistoryItem/TimesUsed</Term>
+      <Term>FormHistoryItem/Guid</Term>
+    </param>
+  </module>
+  <module name="xpath" version="1.4.30.0" root="EmptyStubItem">
+    <param name="expression" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="xpath2v2" version="1.4.30.0" root="EmptyStubItem">
+    <param name="expression" type="String" value=""></param>
+    <param name="type" type="String" value=""></param>
+    <param name="path" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="regex" version="1.4.31.0" root="EmptyStubItem">
+    <param name="expression" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="regexv2" version="1.4.31.0" root="EmptyStubItem">
+    <param name="expression" type="String" value=""></param>
+    <param name="type" type="String" value=""></param>
+    <param name="path" type="String" value=""></param>
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param>
+    </param>
+  </module>
+  <module name="w32scripting-persistence" version="1.4.46.0" root="PersistenceItem">
+    <param name="Prevent Hibernation" type="Boolean" value=""></param>
+    <param name="Path" type="String" value="%systemdrive%">
+      <Term>PersistenceItem/FileItem/DevicePath</Term>
+      <Term>PersistenceItem/FileItem/FullPath</Term>
+      <Term>PersistenceItem/FileItem/Drive</Term>
+      <Term>PersistenceItem/FileItem/FilePath</Term>
+      <Term>PersistenceItem/FileItem/FileName</Term>
+      <Term>PersistenceItem/FileItem/FileExtension</Term>
+      <Term>PersistenceItem/FileItem/SizeInBytes</Term>
+      <Term>PersistenceItem/FileItem/Created</Term>
+      <Term>PersistenceItem/FileItem/Modified</Term>
+      <Term>PersistenceItem/FileItem/Accessed</Term>
+      <Term>PersistenceItem/FileItem/Changed</Term>
+      <Term>PersistenceItem/FileItem/FilenameCreated</Term>
+      <Term>PersistenceItem/FileItem/FilenameModified</Term>
+      <Term>PersistenceItem/FileItem/FilenameAccessed</Term>
+      <Term>PersistenceItem/FileItem/FilenameChanged</Term>
+      <Term>PersistenceItem/FileItem/FileAttributes</Term>
+      <Term>PersistenceItem/FileItem/Username</Term>
+      <Term>PersistenceItem/FileItem/SecurityID</Term>
+      <Term>PersistenceItem/FileItem/SecurityType</Term>
+      <Term>PersistenceItem/FileItem/INode</Term>
+      <Term>PersistenceItem/FileItem/StreamList/Stream/SizeInBytes</Term>
+      <Term>PersistenceItem/FileItem/StreamList/Stream/Name</Term>
+    </param>
+    <param name="MD5" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/Md5sum</Term>
+      <Term>PersistenceItem/FileItem/StreamList/Stream/Md5sum</Term>
+      <Term>PersistenceItem/ServiceItem/pathmd5sum</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLmd5sum</Term>
+    </param>
+    <param name="SHA1" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/Sha1sum</Term>
+      <Term>PersistenceItem/FileItem/StreamList/Stream/Sha1sum</Term>
+      <Term>PersistenceItem/ServiceItem/pathsha1sum</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLsha1sum</Term>
+    </param>
+    <param name="SHA256" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/Sha256sum</Term>
+      <Term>PersistenceItem/FileItem/StreamList/Stream/Sha256sum</Term>
+      <Term>PersistenceItem/ServiceItem/pathsha256sum</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLsha256sum</Term>
+    </param>
+    <param name="Analyze Entropy" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/Type</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Subsystem</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/BaseAddress</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/PETimeStamp</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/PEChecksum/PEFileRaw</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/PEChecksum/PEFileAPI</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/PEChecksum/PEComputedAPI</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/ExtraneousBytes</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Sections/Section/Name</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Sections/Section/Type</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Sections/Section/SizeInBytes</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Sections/Section/DetectedCharacteristics</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Sections/Section/Entropy/CurveData/float</Term>
+      <Term>PersistenceItem/FileItem/PeakEntropy</Term>
+      <Term>PersistenceItem/FileItem/PeakCodeEntropy</Term>
+    </param>
+    <param name="Enumerate Imports" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/ImportedModules/Module/Name</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/ImportedModules/Module/ImportedFunctions/string</Term>
+    </param>
+    <param name="Enumerate Exports" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/Exports/ExportsTimeStamp</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Exports/NumberOfFunctions</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Exports/NumberOfNames</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Exports/ExportedFunctions/string</Term>
+    </param>
+    <param name="Analyze File Anomalies" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/DetectedAnomalies/string</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/DetectedEntryPointSignature/Name</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/DetectedEntryPointSignature/Type</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/Sections/Section/DetectedSignatureKeys/string</Term>
+    </param>
+    <param name="Scan Entry Point Distance" type="Int32" value="">
+      <Term>PersistenceItem/FileItem/PEInfo/EpJumpCodes/Depth</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/EpJumpCodes/Opcodes</Term>
+    </param>
+    <param name="Verify Digital Signatures" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/DigitalSignature/SignatureExists</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/DigitalSignature/SignatureVerified</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/DigitalSignature/Description</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/DigitalSignature/CertificateIssuer</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/DigitalSignature/CertificateSubject</Term>
+      <Term>PersistenceItem/ServiceItem/pathSignatureExists</Term>
+      <Term>PersistenceItem/ServiceItem/pathSignatureVerified</Term>
+      <Term>PersistenceItem/ServiceItem/pathSignatureDescription</Term>
+      <Term>PersistenceItem/ServiceItem/pathCertificateSubject</Term>
+      <Term>PersistenceItem/ServiceItem/pathCertificateIssuer</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLCertificateSubject</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLCertificateIssuer</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLSignatureExists</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLSignatureVerified</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLLSignatureDescription</Term>
+    </param>
+    <param name="Get Resources" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Name</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Type</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Size</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/ResourceInfoList/ResourceInfoItem/Language</Term>
+    </param>
+    <param name="Get Version Info" type="Boolean" value="true">
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/Language</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/ProductName</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/ProductVersion</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/Comments</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/CompanyName</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/FileDescription</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/FileVersion</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/InternalName</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/LegalCopyright</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/OriginalFilename</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/LegalTrademarks</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/PrivateBuild</Term>
+      <Term>PersistenceItem/FileItem/PEInfo/VersionInfoList/VersionInfoItem/SpecialBuild</Term>
+    </param>
+    <param>
+      <Term>PersistenceItem/RegistryItem/Path</Term>
+      <Term>PersistenceItem/RegistryItem/Type</Term>
+      <Term>PersistenceItem/RegistryItem/Modified</Term>
+      <Term>PersistenceItem/RegistryItem/NumSubKeys</Term>
+      <Term>PersistenceItem/RegistryItem/NumValues</Term>
+      <Term>PersistenceItem/RegistryItem/Hive</Term>
+      <Term>PersistenceItem/RegistryItem/KeyPath</Term>
+      <Term>PersistenceItem/RegistryItem/Username</Term>
+	  <Term>PersistenceItem/RegistryItem/SecurityID</Term>
+      <Term>PersistenceItem/RegistryItem/ValueName</Term>
+      <Term>PersistenceItem/RegistryItem/Text</Term>
+      <Term>PersistenceItem/RegistryItem/ReportedLengthInBytes</Term>
+      <Term>PersistenceItem/RegistryItem/Value</Term>
+    </param>
+    <param>
+      <Term>PersistenceItem/ServiceItem/name</Term>
+      <Term>PersistenceItem/ServiceItem/descriptiveName</Term>
+      <Term>PersistenceItem/ServiceItem/description</Term>
+      <Term>PersistenceItem/ServiceItem/mode</Term>
+      <Term>PersistenceItem/ServiceItem/startedAs</Term>
+      <Term>PersistenceItem/ServiceItem/path</Term>
+      <Term>PersistenceItem/ServiceItem/arguments</Term>
+      <Term>PersistenceItem/ServiceItem/serviceDLL</Term>
+      <Term>PersistenceItem/ServiceItem/status</Term>
+      <Term>PersistenceItem/ServiceItem/pid</Term>
+      <Term>PersistenceItem/ServiceItem/type</Term>
+    </param>
+    <param>
+      <Term>PersistenceItem/LinkFilePath</Term>
+      <Term>PersistenceItem/PersistenceType</Term>
+      <Term>PersistenceItem/RegContext</Term>
+    </param>
+  </module>
+</OpenIOCMap>

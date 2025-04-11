@@ -1,0 +1,42 @@
+Description: WatcherWin
+Author: Brian Maloney
+Version: 1.0
+Id: 01a96d71-fbe1-43a5-96a2-e23e07a5b76b
+Code_File: WatcherWin.cpp
+
+Functions:
+    -
+        Function: WatcherWin::ExamineChange
+        Description: File Action
+        Flags: [858, 893, 911, 966, 980]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 Description_len;
+                char  Description[Description_len];
+                int32 File_Path_len;
+                char  File_Path[File_Path_len];
+                int32 unk1_len;
+                char  unk1[unk1_len];
+                int32 unk2_len;
+                char  unk2[unk2_len];
+            };
+    -
+        Function: WatcherWin::ExamineChange
+        Description: File Action
+        Flags: [874]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 File_Path_len;
+                char  File_Path[File_Path_len];
+                int32 Description_len;
+                char  Description[Description_len];
+                int32 unk1_len;
+                char  unk1[unk1_len];
+                int32 unk2_len;
+                char  unk2[unk2_len];
+            };
+
+# Documentation
+# N/A

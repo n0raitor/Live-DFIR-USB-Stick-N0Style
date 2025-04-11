@@ -1,0 +1,276 @@
+﻿CREATE TABLE [AnalysisSessionInfo] 
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[Version] TEXT NULL,
+	[SessionVersion] TEXT NULL,
+	[AuditLocation] TEXT NULL,
+	[MRIConfigUid] TEXT NULL,
+	[DigSigsAvailable] BOOLEAN NULL,
+	[MemoryImageLocation] TEXT NULL,
+	[BatchResultPath]  TEXT NULL,
+	[AcquisitionsLocation] TEXT NULL,
+	[IOCReportsLocation] TEXT NULL,
+	[AuditHash] TEXT NULL,
+	[WhitelistUid] TEXT NULL,
+	[TimelineConfiguration] TEXT NULL,
+	[CollectionType] TEXT NULL
+);
+
+CREATE TABLE [AcquisitionHistory]
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[Name] TEXT NULL,
+	[AcquireValue] TEXT NULL,
+	[State] TEXT NULL,
+	[Location] TEXT NULL,
+	[Type] TEXT NULL,
+	[AcquisitionDate] TIMESTAMP NULL,
+	[Exception] TEXT NULL
+);
+
+CREATE TABLE [PIDPivots]
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[PID] INTEGER NULL,	
+	[ProcessId] INTEGER NULL,
+	[ProcessParentId] INTEGER NULL,
+	[EventsId] INTEGER NULL,
+	[PortsId] INTEGER NULL,
+	[ServiceId] INTEGER NULL,
+	[RestoreId] INTEGER NULL,
+	[DnsLookupAgentEventId] INTEGER NULL,
+	[FileWriteAgentEventId] INTEGER NULL,
+	[NetworkAgentEventId] INTEGER NULL,
+	[ImageLoadAgentEventId] INTEGER NULL,
+	[UniqueProcessId] INTEGER NULL,		
+	FOREIGN KEY (ProcessId) REFERENCES Processes(ID) ON DELETE SET NULL,
+	FOREIGN KEY (ProcessParentId) REFERENCES Processes(ID) ON DELETE SET NULL,	
+	FOREIGN KEY (EventsId) REFERENCES EventLogItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (PortsId) REFERENCES Ports(ID) ON DELETE SET NULL,
+	FOREIGN KEY(ServiceId) REFERENCES ServiceItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RestoreId) REFERENCES SystemRestores(ID) ON DELETE SET NULL,
+	FOREIGN KEY(DnsLookupAgentEventId) REFERENCES DnsLookupAgentEvents(ID) ON DELETE SET NULL,
+	FOREIGN KEY(FileWriteAgentEventId) REFERENCES FileWriteAgentEvents(ID) ON DELETE SET NULL,	
+	FOREIGN KEY(NetworkAgentEventId) REFERENCES NetworkAgentEvents(ID) ON DELETE SET NULL,	
+	FOREIGN KEY(ImageLoadAgentEventId) REFERENCES ImageLoadAgentEvents(ID) ON DELETE SET NULL,		
+	FOREIGN KEY (UniqueProcessId) REFERENCES UniqueProcesses(rowid) ON DELETE SET NULL
+);
+
+CREATE TABLE [PathPivots]
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[PossibleParentId] INTEGER Null,
+	[RegistryId] INTEGER Null,
+	[RegistryStringsId] INTEGER Null,			
+	[AbsolutePath] TEXT NULL,			
+	[PossibleDirectoryPath] TEXT NULL,			
+	[PossibleFileName] TEXT NULL,
+	[DriveIndependentPath] TEXT NULL,
+	[FileId] TEXT NULL,
+	[ProcessId] INTEGER NULL,
+	[UniqueProcessId] INTEGER NULL,		
+	FOREIGN KEY (ProcessId) REFERENCES Processes(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RegistryId) REFERENCES RegistryItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RegistryStringsId) REFERENCES RegistryItemStrings(ID) ON DELETE SET NULL,
+	FOREIGN KEY (FileId) REFERENCES FileItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (UniqueProcessId) REFERENCES UniqueProcesses(rowid) ON DELETE SET NULL
+);
+
+DROP TABLE IF EXISTS HierarchicalProcesses;
+CREATE TABLE [HierarchicalProcesses] 
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	[Depth] INTEGER NULL,
+	[HasChildren] BOOLEAN NULL,
+	[ProcessId] INTEGER NULL,
+	FOREIGN KEY(ProcessId) REFERENCES Processes(ID) ON DELETE SET NULL
+);
+
+DROP TABLE IF EXISTS HookTrustStatus;
+CREATE TABLE IF NOT EXISTS HookTrustStatus
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	[TrustStatus] TEXT NULL,
+	[HookId] INTEGER NULL,
+	FOREIGN KEY(HookId) REFERENCES Hooks(ID) ON DELETE SET NULL
+);
+
+DROP TABLE IF EXISTS DeviceTree;
+CREATE TABLE IF NOT EXISTS DeviceTree
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	[Depth] INTEGER NULL,
+	[HasChildren] BOOLEAN NULL,
+	[DeviceType] TEXT NULL,
+	[Name] TEXT NULL,
+	[TrustStatus] TEXT NULL,
+	[DriverId] INTEGER NULL,
+	[DeviceId] INTEGER NULL,
+	FOREIGN KEY( DriverId ) REFERENCES DriverItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY( DeviceId ) REFERENCES DeviceItems(ID) ON DELETE SET NULL
+);
+
+CREATE TABLE [ModuleResults]
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[Generator] TEXT NULL,
+	[HasIssue] BOOLEAN NULL,
+	[ModuleParams] BLOB NULL,
+	[AuditResultId] INTEGER NULL,
+	FOREIGN KEY(AuditResultId) REFERENCES AuditResults(ID) ON DELETE SET NULL		
+);
+
+CREATE TABLE [DnsEntries]
+(	
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[RowId] GUID NULL,
+	[DataLength] INTEGER NULL,
+	[Flags] TEXT NULL,
+	[Host] TEXT NULL,
+	[RecordName] TEXT NULL,
+	[RecordType] TEXT NULL,
+	[TimeToLive] TEXT NULL,
+	[AuditResultId] INTEGER NULL,
+	FOREIGN KEY(AuditResultId) REFERENCES AuditResults(ID) ON DELETE SET NULL
+);
+
+CREATE TABLE [RecordData]
+(	
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[RowId] GUID NULL,
+	[AddressType] TEXT NULL,
+	[AdministratorName] TEXT NULL,
+	[Algorithm] TEXT NULL,
+	[ATMAddress] BLOB NULL,
+	[Bitmask] INTEGER NULL,
+	[Blob] BLOB NULL,
+	[CacheTimeout] TEXT NULL,
+	[CreationDate] TIMESTAMP NULL,
+	[DateSigned] TIMESTAMP NULL,
+	[DefaultTimeToLive] TEXT NULL,
+	[Digest] BLOB NULL,
+	[DigestLength] INTEGER NULL,
+	[DigestType] TEXT NULL,
+	[Error] TEXT NULL,
+	[ExpirationDate] TIMESTAMP NULL,
+	[Expire] TEXT NULL,
+	[FudgeTime] INTEGER NULL,
+	[Host] TEXT NULL,
+	[IPv4Address] TEXT NULL,
+	[IPv6Address] TEXT NULL,
+	[Key] BLOB NULL,
+	[KeyFlags] INTEGER NULL,
+	[KeyLength] INTEGER NULL,
+	[KeyName] TEXT NULL,
+	[KeyTag] INTEGER NULL,
+	[LabelCount] INTEGER NULL,
+	[LookupTimeout] TEXT NULL,
+	[MailboxErrorsName] TEXT NULL,
+	[MailboxName] TEXT NULL,
+	[MappingFlag] TEXT NULL,
+	[Mode] TEXT NULL,
+	[MxHost] TEXT NULL,
+	[NextHost] TEXT NULL,
+	[RecordDataOrder] INTEGER NULL,
+	[OriginalTimeToLive] TEXT NULL,
+	[OriginalXid] INTEGER NULL,
+	[Port] INTEGER NULL,
+	[Preference] INTEGER NULL,
+	[PrimaryServerName] TEXT NULL,
+	[Priority] INTEGER NULL,
+	[Protocol] TEXT NULL,
+	[PublicKey] BLOB NULL,
+	[Refresh] TEXT NULL,
+	[RegularExpression] TEXT NULL,
+	[Replacement] TEXT NULL,
+	[Retry] TEXT NULL,
+	[SerialNumber] INTEGER NULL,
+	[Services] TEXT NULL,
+	[Signature] BLOB NULL,
+	[SignatureLength] INTEGER NULL,
+	[Signer] TEXT NULL,
+	[TargetHost] TEXT NULL,
+	[TypeCovered] TEXT NULL,
+	[Weight] INTEGER NULL,
+	[RecordDataDescription]  TEXT NULL,
+	[DnsEntryId] INTEGER NULL,
+	FOREIGN KEY(DnsEntryId) REFERENCES DnsEntries(ID) ON DELETE SET NULL
+);
+
+CREATE TABLE [RecordDataStrings]
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[StringValue] TEXT NOT NULL,
+	[RecordDataAnomaliesId] INTEGER NULL,
+	[RecordDataStringId] INTEGER NULL,
+	[RecordDataTypeId] INTEGER NULL,
+	[RecordDataWinServerIpv4Id] INTEGER NULL,
+	FOREIGN KEY (RecordDataAnomaliesId) REFERENCES RecordData(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RecordDataStringId) REFERENCES RecordData(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RecordDataTypeId) REFERENCES RecordData(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RecordDataWinServerIpv4Id) REFERENCES RecordData(ID) ON DELETE SET NULL
+);
+
+CREATE TABLE [TagRelations]
+(
+	[ID] INTEGER NOT NULL PRIMARY KEY,
+	[Tag] INTEGER NULL,
+	[Comment] TEXT NULL,
+	[AuditType] TEXT NULL,
+	[FileItemId] INTEGER NULL,
+	[ProcessId] INTEGER NULL,
+	[SystemId] INTEGER NULL,
+	[RegistryId] INTEGER NULL,
+	[EventsId] INTEGER NULL,
+	[PortsId] INTEGER NULL,
+	[TaskId] INTEGER NULL,
+	[PEInfoId] INTEGER NULL,
+	[DnsId] INTEGER NULL,
+	[PrefetchId] INTEGER NULL,
+	[RestoreId] INTEGER NULL,
+	[UserId] INTEGER NULL,
+	[VolumeId] INTEGER NULL,
+	[UrlHistoryId] INTEGER NULL,
+	[CookieHistoryId] INTEGER NULL,
+	[FormHistoryId] INTEGER NULL,
+	[FileDownloadId] INTEGER NULL,
+	[AgentEventId] INTEGER NULL,
+	[PersistenceId] INTEGER NULL,
+	[ArpEntryId] INTEGER NULL,
+	[RouteEntryId] INTEGER NULL,
+	[RegistryHiveId] INTEGER NULL,
+	[ServiceItemId] INTEGER NULL,
+	[HookId] INTEGER NULL,
+	[ModuleItemId] INTEGER NULL,
+	[DiskId] INTEGER NULL,	
+	[DeviceId] INTEGER NULL,	
+	[TimelineId] INTEGER NULL,
+	FOREIGN KEY (FileItemId) REFERENCES FileItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (ProcessId) REFERENCES Processes(ID) ON DELETE SET NULL,
+	FOREIGN KEY (SystemId) REFERENCES Systems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RegistryId) REFERENCES RegistryItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (EventsId) REFERENCES EventLogItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (PortsId) REFERENCES Ports(ID) ON DELETE SET NULL,
+	FOREIGN KEY (TaskId) REFERENCES TaskItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (PEInfoId) REFERENCES PEInfos(ID) ON DELETE SET NULL,
+	FOREIGN KEY (DnsId) REFERENCES DnsEntries(ID) ON DELETE SET NULL,
+	FOREIGN KEY (PrefetchId) REFERENCES Prefetch(ID) ON DELETE SET NULL,
+	FOREIGN KEY (RestoreId) REFERENCES SystemRestores(ID) ON DELETE SET NULL,
+	FOREIGN KEY (UserId) REFERENCES UserAccounts(ID) ON DELETE SET NULL,
+	FOREIGN KEY (VolumeId) REFERENCES VolumeItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY (UrlHistoryId) REFERENCES UrlHistory(ID) ON DELETE SET NULL,
+	FOREIGN KEY (CookieHistoryId) REFERENCES CookieHistory(ID) ON DELETE SET NULL,
+	FOREIGN KEY (FormHistoryId) REFERENCES FormHistory(ID) ON DELETE SET NULL,
+	FOREIGN KEY (FileDownloadId) REFERENCES FileDownloadHistory(ID) ON DELETE SET NULL,
+	FOREIGN KEY (AgentEventId) REFERENCES AgentEventId(ID) ON DELETE SET NULL,
+	FOREIGN KEY(PersistenceId) REFERENCES Persistence(ID) ON DELETE SET NULL,
+	FOREIGN KEY(ArpEntryId) REFERENCES ArpEntries(ID) ON DELETE SET NULL,
+	FOREIGN KEY(RouteEntryId) REFERENCES RouteEntries(ID) ON DELETE SET NULL,
+	FOREIGN KEY(RegistryHiveId) REFERENCES RegistryHives(ID) ON DELETE SET NULL,
+	FOREIGN KEY(ServiceItemId) REFERENCES ServiceItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY(HookId) REFERENCES Hooks(ID) ON DELETE SET NULL,
+	FOREIGN KEY(ModuleItemId) REFERENCES ModuleItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY(DiskId) REFERENCES DiskItems(ID) ON DELETE SET NULL,
+	FOREIGN KEY(DeviceId) REFERENCES DeviceTree(ID) ON DELETE SET NULL,
+	FOREIGN KEY (TimelineId) REFERENCES TimeRelations(ID) ON DELETE SET NULL
+);

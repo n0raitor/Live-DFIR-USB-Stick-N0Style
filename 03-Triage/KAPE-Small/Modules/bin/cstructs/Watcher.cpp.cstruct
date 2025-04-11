@@ -1,0 +1,42 @@
+Description: Watcher
+Author: Brian Maloney
+Version: 1.0
+Id: 88f1a36f-0024-44d4-b883-85bfc97b12f7
+Code_File: Watcher.cpp
+
+Functions:
+    -
+        Function: Watcher::ExamineChange
+        Description: File Action
+        Flags: [790, 825, 851, 896, 909]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 Description_len;
+                char  Description[Description_len];
+                int32 File_Path_len;
+                char  File_Path[File_Path_len];
+                int32 unk1_len;
+                char  unk1[unk1_len];
+                int32 unk2_len;
+                char  unk2[unk2_len];
+            };
+    -
+        Function: Watcher::ExamineChange
+        Description: File Action
+        Flags: [840]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 File_Path_len;
+                char  File_Path[File_Path_len];
+                int32 Description_len;
+                char  Description[Description_len];
+                int32 unk1_len;
+                char  unk1[unk1_len];
+                int32 unk2_len;
+                char  unk2[unk2_len];
+            };
+
+# Documentation
+# N/A

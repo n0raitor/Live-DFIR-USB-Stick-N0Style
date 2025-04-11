@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulevalidators xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<modules>
+		<module name="WebHistorian">
+			<rules>
+				<rule name="CheckForFatalIssues" xsi:type="XPathValidationRule">
+					<params>
+						<param name="xpath">
+							<value>/IssueList/Issue[@level='Fatal']</value>
+							<condition>none</condition>
+							<message>Issue documnets must not contain any fatal error.</message>
+						</param>					
+					</params>
+				</rule>
+				
+				<rule name="ChekForWHModules" xsi:type="XPathValidationRule">
+					<params>						
+						<param name="xpath">
+							<value>itemList [@generator='cookiehistory']/@generator|//itemList [@generator='filedownloadhistory']/@generator|//itemList [@generator='formhistory']/@generator|//itemList [@generator='urlhistory']/@generator</value>
+							<condition>atleastone</condition>
+							<message>Atleast one WebHistorian module is required</message>
+						</param>
+					</params>
+				</rule>				
+			</rules>
+		</module>
+	</modules>
+</modulevalidators>

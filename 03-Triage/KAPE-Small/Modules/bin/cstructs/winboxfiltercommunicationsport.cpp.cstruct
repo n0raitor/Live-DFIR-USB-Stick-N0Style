@@ -1,0 +1,78 @@
+Description: Winbox Filter Communications Port
+Author: Brian Maloney
+Version: 2.1
+Id: 919b2c62-3c7a-4d27-b2b5-84918b7cc974
+Code_File: WinboxFilterCommunicationsPort.cpp
+
+Functions:
+    -
+        Function: WinboxFilterCommunicationsPort::OnRenameCompletion
+        Description: File Rename
+        Flags: [1061, 1084, 1118, 1133]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 OldFileName_len;
+                char OldFileName[OldFileName_len];
+                int32 NewFileName_len;
+                char NewFileName[NewFileName_len];
+                int64 unk1;
+                int64 unk2;
+                int32 ProcessName_len;
+                char ProcessName[ProcessName_len];
+                int32 PID;
+                int64 unk3;
+            };
+    -
+        Function: WinboxFilterCommunicationsPort::OnDeleteCompletion
+        Description: File Delete
+        Flags: [1092, 1107]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 FileName_len;
+                char FileName[FileName_len];
+                int64 volumeID;
+                int64 fileID;
+                int32 ProcessName_len;
+                char ProcessName[ProcessName_len];
+                int32 PID;
+                int64 unk1;
+            };
+    -
+        Function: WinboxFilterCommunicationsPort::OnFileOpenCompletion
+        Description: File Open
+        Flags: [1180]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 ProcessName_len;
+                char ProcessName[ProcessName_len];
+                int32 PID;
+                int32 unk1;
+                int32 FileName_len;
+                char FileName[FileName_len];
+                int64 itemIndex;
+                int64 volumeID;
+                char unk2[16];
+            };
+    -
+        Function: WinboxFilterCommunicationsPort::OnFileCloseCompletion
+        Description: File Close
+        Flags: [1204]
+        Structure: |
+            #define %s_des "%s"
+            struct %s {
+                int32 ProcessName_len;
+                char ProcessName[ProcessName_len];
+                int32 PID;
+                int32 unk1;
+                int32 FileName_len;
+                char FileName[FileName_len];
+                int64 itemIndex;
+                int64 volumeID;
+                int32 unk2;
+            };
+
+# Documentation
+# N/A

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<InvestigativeSupport>
+	<Version>1.0.1600</Version>
+	<InvestigativeStepDescriptions>
+		<InvestigativeStepDescription Name="ProcessesInvestigativeStep" Title="Review Processes by MRI Scores">
+			<Description>MRI (Malware Risk Index) scoring uses a variety of techniques to assess the risk that a process is malware.  Processes with a high MRI Score (up to 100) are more risky; those with a low score are less.  Double click on a process name to view an MRI report that describes the reasons for that process's rating.  MRI is intended as a guide for investigation; be aware that it can generate false positives and false negatives.  These can be corrected in the MRI report.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="ProcessesLowMRIFilter" Title="Redlined Processes">
+			<Description>Show only processes that have been determined to be of a high level of risk.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="ProcessesAllFilter" Title="All Processes">
+			<Description>Show all Processes.</Description>
+		</InvestigativeStepDescription>
+
+		<InvestigativeStepDescription Name="portsInvestigativeStep" Title="Review Network Ports From Process Memory">
+			<Description>Malware often initiates outbound connections to command and control servers, or may listen on a port for incoming connections.  Review the network ports and connections for unusual / unexpected source or destination ports and addresses, especially from what appear to be system processes.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="portsEstablishedFilter" Title="Established Ports">
+			<Description>Review outbound connections to IPs in suspicious locations or unfriendly nations. Look for communication on suspicious or nonstandard ports.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="portsListeningFilter" Title="Listening Ports">
+			<Description>Look for unknown ports in a Listening state and confirm known processes are listening only on ports typical in your environment.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="portsAllFilter" Title="All Ports">
+			<Description>Show all Ports.</Description>
+		</InvestigativeStepDescription>
+
+		<InvestigativeStepDescription Name="sectionsInvestigativeStep" Title="Review Memory Sections / DLLs">
+			<Description>These views show the memory sections that each running process is comprised of.  Named memory sections are those that are mapped to files, primarily DLLs.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="sectionsAllFilter" Title="All Memory Sections">
+			<Description>Show all Memory Sections.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="sectionsNamedFilter" Title="Named Sections Only">
+			<Description>Show only Named Sections.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="sectionsLfoFilter" Title="Least Frequency of Occurrence">
+			<Description>Shows only Named Sections that occur less than 4 times across all processes.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="sectionsLfoUntrustedFilter" Title="Least Frequency of Occurrence (Untrusted Only)">
+			<Description>Shows only Named Sections that occur less than 4 times across all processes and are untrusted.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="sectionsInjectedFilter" Title="Injected Memory Sections">
+			<Description>Show only Injected Memory Sections.</Description>
+		</InvestigativeStepDescription>
+
+		<InvestigativeStepDescription Name="handlesInvestigativeStep" Title="Review Untrusted Handles">
+			<Description>The "untrusted handles only" view filters the list of handles to eliminate those found in multiple trustworthy processes.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="handlesUntrustedFilter" Title="Untrusted Handles Only">
+			<Description>Filter out handles which are not found in at least 3 process which are determined to be of the lowest risk based on MRI Score.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="handlesAllFilter" Title="All Handles">
+			<Description>Show all Handles.</Description>
+		</InvestigativeStepDescription>
+
+		<InvestigativeStepDescription Name="hooksInvestigativeStep" Title="Review Hooks">
+			<Description>Rootkits often use hooks in the kernel  to implement hiding functions.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="hooksAllFilter" Title="All Hooks">
+			<Description>Show all Hooks.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="hooksIdtFilter" Title="IDT Hooks">
+			<Description>Show only Interrupt Descriptor Table hooks.  IDT hooks are usually malicious.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="hooksSsdtFilter" Title="SSDT Hooks">
+			<Description>Show only System Service Descriptor Table Hooks.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="hooksIrpFilter" Title="IRP Hooks">
+			<Description>Show only Driver IRP Hooks.</Description>
+		</InvestigativeStepDescription>
+		<InvestigativeStepDescription Name="hooksBasicFilter" Title="Untrusted Hooks">
+			<Description>This filter tries to make intelligent decisions about what hooks are considered untrusted.  In some cases it makes the wrong decisions.  Please do not rely solely on this view.</Description>
+		</InvestigativeStepDescription>
+
+		<InvestigativeStepDescription Name="driversInvestigativeStep" Title="Review Drivers and Devices">
+			<Description>Installing a layered driver is another way that attackers intercept packets, keystrokes, and filesystem queries. The existence of a layered driver is not necessarily an indication of malicious activity. Here is an example of some drivers to check for layered drivers. The root driver \FileSystem\Ntfs should be checked to see what is layered on top of it. The driver \FileSystem\sr is commonly layered on top of it, but other drivers may be an indication of a file filter driver, which can hide files and directories or filter file contents. The keyboard class driver, \Driver\Kbdclass, could also be checked. If a driver has implemented a keylogger using layering, check for its existence on top of \Driver\Kbdclass.</Description>
+		</InvestigativeStepDescription>
+	</InvestigativeStepDescriptions>
+</InvestigativeSupport>
