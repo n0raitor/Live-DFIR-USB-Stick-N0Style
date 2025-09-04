@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="urn:uuid:9f34a579-b3d4-46d5-80d9-905c4d3512f7" chaining="implicit">
+  <commands>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:64cb23bc-0f57-4066-bb2c-4601e531be24">
+      <module name="processes-api" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:ce6aaf21-b5af-4c71-9540-f1bd809c98f2">
+      <module name="files-api" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="Path">
+            <value xsi:type="xsd:string">/</value>
+          </param>
+          <param name="Regex">
+            <value xsi:type="xsd:string">^(?:usr|lib|lib64|opt|home|sbin|bin|etc|root)+</value>
+          </param>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Minimum Sizes" />
+          <param name="Maximum Sizes" />
+          <param name="Filter MD5" />
+          <param name="Filter SHA1" />
+          <param name="Filter SHA256" />
+          <param name="AND Operator">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Include Files">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Include Directories">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Include Remote Locations">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:5193cb07-4172-4b37-bac5-a144eb5f00c7">
+      <module name="sysinfo" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:b8af1468-4e70-4d4f-9b09-2dba32ec8e2b">
+      <module name="ports" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:bb4e6a8b-a27e-4594-adcb-b9c13bc6d1d1">
+      <module name="shell-history" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="UserList" />
+          <param name="ShellList" />
+          <param name="CommandRegex" />
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:27c3cf0b-c7ea-4048-a7ad-71e11510fd2e">
+      <module name="logins" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="Include Failed Logins">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Include Historical Logins">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="History Paths">
+            <value xsi:type="xsd:string">/var/run/utmp</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:46bf8347-7550-4eb6-89fe-1363b0bf6871">
+      <module name="kernel-modules" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Enumerate Aliases">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Enumerate Dependencies">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Enumerate Parameters">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:b82ac2c4-b522-4abf-aa7a-866fc4692e98">
+      <module name="tasks" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+  </commands>
+</script>

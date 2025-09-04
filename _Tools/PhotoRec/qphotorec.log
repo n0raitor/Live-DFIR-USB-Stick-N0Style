@@ -1,0 +1,31 @@
+en
+translator not installed
+
+
+Sat May 31 11:47:09 2025
+PhotoRec 7.3-WIP, Data Recovery Utility, April 2025
+Christophe GRENIER <grenier@cgsecurity.org>
+https://www.cgsecurity.org
+OS: Windows 8 (9200)
+Compiler: GCC 14.2, MinGW 3.11
+ext2fs lib: none, ntfs lib: available, ewf lib: 20140608, libjpeg: libjpeg-turbo-3.0.2
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\PhysicalDrive0)=262144000000
+disk_get_size_win32 IOCTL_DISK_GET_LENGTH_INFO(\\.\C:)=261090181120
+filewin32_getfilesize(\\.\D:) GetFileSize err Incorrect function.
+
+filewin32_setfilepointer(\\.\D:) SetFilePointer err Incorrect function.
+
+Warning: can't get size for \\.\D:
+Partition table type (auto): EFI GPT
+Disk \\.\PhysicalDrive0 - 262 GB / 244 GiB (RO) - VMware, VMware Virtual S
+check_part_gpt failed for partition
+ 2 P MS Reserved             38  94 57    40 105  1      32768 [Microsoft reserved partition]
+       0 0000 0000 00 00 00 00 00 00 00 00
+     Unknown                  0   0  1 31870 134  8  512000000 [Whole disk]
+ 1 P EFI System               0  32 33    38  94 56     614400 [EFI system partition]
+ 2 P MS Reserved             38  94 57    40 105  1      32768 [Microsoft reserved partition]
+ 3 P MS Data                 40 105  2 31782 208 42  509941760 [Basic data partition] [Windows-11]
+     NTFS, blocksize=4096, 261 GB / 243 GiB
+ 4 P Windows Recovery Env 31782 208 43 31870  69  7    1404928
+       0 0000 0000 00 00 00 00 00 00 00 00
+QPhotoRec exited normally.

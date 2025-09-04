@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<script xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="urn:uuid:3d602f82-b6c1-4afb-a300-2a6a715ba6ba" chaining="implicit">
+  <commands>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:aee9375e-f5b5-410f-baca-5452b2308db1">
+      <module name="processes-api" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:f54884d2-f50f-48a3-968b-2927cded11ff">
+      <module name="files-api" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="Path">
+            <value xsi:type="xsd:string">/</value>
+          </param>
+          <param name="Regex">
+            <value xsi:type="xsd:string">^(?:Applications|Library|System|User|bin|cores|opt|private|sbin|usr)+</value>
+          </param>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Minimum Sizes" />
+          <param name="Maximum Sizes" />
+          <param name="Filter MD5" />
+          <param name="Filter SHA1" />
+          <param name="Filter SHA256" />
+          <param name="AND Operator">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Include Files">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Include Directories">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Include Remote Locations">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:91d0acf1-bf3f-4346-9c22-1f5f02d39f85">
+      <module name="sysinfo" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:0905c511-980c-4f22-bf41-e41362d85d9a">
+      <module name="disks" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:d580ff7c-93b6-46e4-8182-8021ceb6e246">
+      <module name="volumes" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:9ae8492c-9c4f-451b-832e-da0196ba429b">
+      <module name="useraccounts" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:fadcc0e0-ed32-4914-a217-c107e21b0d8f">
+      <module name="groups" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:a6387d8b-e395-4793-b1ff-fb5152a207cb">
+      <module name="persistence" version="1.4.45.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:3bf6bfc0-5cd5-4628-8d9f-cd5264f7ec79">
+      <module name="tasks" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:84c65a6e-071c-43a0-bc28-b90200478150">
+      <module name="cookiehistory" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="TargetBrowser" />
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:b11fd568-ab1b-4429-b754-a59b58e1eb97">
+      <module name="filedownloadhistory" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="TargetBrowser" />
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:da9244fb-109b-44d6-8e5e-dd02564662af">
+      <module name="formhistory" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="TargetBrowser" />
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:a6e9bf58-fc06-4ac1-a66e-03f6720f7a6f">
+      <module name="urlhistory" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="TargetBrowser" />
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:119a92c8-8fe3-4b2d-8360-307760fd781a">
+      <module name="network-arp" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:be151fea-702a-4550-ab8c-bb47932fa19c">
+      <module name="network-dns" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:dc603d47-d985-4277-957d-a6f21d005cae">
+      <module name="network-route" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:9d153eba-f897-4f67-a6e7-882ff20ca74e">
+      <module name="ports" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:983633ef-fd78-4b35-80f7-a9e4d8956aa5">
+      <module name="services" version="1.4.36.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters>
+          <param name="MD5">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="SHA1">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="SHA256">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+          <param name="Verify Digital Signatures">
+            <value xsi:type="xsd:boolean">true</value>
+          </param>
+          <param name="Preserve Times">
+            <value xsi:type="xsd:boolean">false</value>
+          </param>
+        </parameters>
+      </config>
+      <filters />
+    </command>
+    <command xsi:type="ExecuteModuleCommand" id="urn:uuid:f201a94c-b220-4904-b8eb-23dc6d7ff0e1">
+      <module name="syslog" version="2.1.4.0" />
+      <config xsi:type="ParameterListModuleConfig">
+        <parameters />
+      </config>
+      <filters />
+    </command>
+  </commands>
+</script>

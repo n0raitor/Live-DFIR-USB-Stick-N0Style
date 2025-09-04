@@ -1,0 +1,98 @@
+<dump>  [app] Application options:
+<dump>  [app] 	locale: 1
+<dump>  [app] 	version: 0
+<dump>  [app] 	hide_tabs: 1
+<dump>  [app] 	scan: 1
+<dump>  [app] 	arg_add_virtual: [empty]
+<dump>  [app] 	arg_add_device: [empty]
+<dump>  [app] 	arg_gdk_scale: nan
+<dump>  [app] 	arg_gdk_dpi_scale: nan
+<dump>  [app] LibDebug options:
+<dump>  [app] 	levels_enabled: 11111
+<dump>  [app] 	debug_colorize: false
+<dump>  [app] {anonymous}::app_init_config(): Global config file: "gsmartcontrol.conf"
+<dump>  [app] {anonymous}::app_init_config(): Local config file: "C:\Users\sansdfir\AppData\Roaming\gsmartcontrol\gsmartcontrol.conf"
+<dump>  [app] {anonymous}::app_init_config(): Old local config file: "C:\Users\sansdfir\Documents\gsmartcontrol.conf"
+<dump>  [rconfig] /                    [3] /                    
+config               [4] /config              
+default              [4] /default             
+<info>  [rconfig] Setting autosave config file to "C:\Users\sansdfir\AppData\Roaming\gsmartcontrol\gsmartcontrol.conf"
+<info>  [rconfig] Starting config autosave with 180 sec. interval.
+<info>  [app] Current C locale: C
+<info>  [app] Current C++ locale: C
+<dump>  [gtk] _g_io_module_get_default: Found default implementation winhttp (GWinHttpVfs) for ‘gio-vfs’
+<dump>  [app] Current GTK theme: Adwaita
+<dump>  [gtk] HKEY_CLASSES_ROOT\Applications\Cyberduck.exe\shell\Shell\open does not have a "command" subkey
+<info>  [app] get_smartctl_binary(): Smartmontools installation not found in "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\smartmontools\InstallLocation".
+<dump>  [default] ENTER: "Cmdex::execute()"
+<info>  [app] Cmdex::execute(): Executing "'smartctl-nc.exe' -V".
+<dump>  [default] EXIT:  "Cmdex::execute()"
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<dump>  [default] ENTER: "Cmdex::unset_stop_timeouts()"
+<dump>  [default] EXIT:  "Cmdex::unset_stop_timeouts()"
+<dump>  [default] EXIT:  "Cmdex::stopped_cleanup()"
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<info>  [app] StorageDetector::detect(): Starting drive detection.
+<info>  [app] Checking which drive corresponds to which \\.\PhysicalDriveN device...
+<dump>  [app] Windows drive found: C.
+<dump>  [app] Windows drive C is fixed.
+<dump>  [app] Windows drive found: D.
+<dump>  [app] Windows drive found: Z.
+<dump>  [app] Windows drive C corresponds to physical drive 0.
+<info>  [app] Getting multi-port devices through smartctl --scan-open...
+<info>  [app] get_smartctl_binary(): Smartmontools installation not found in "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\smartmontools\InstallLocation".
+<dump>  [default] ENTER: "Cmdex::execute()"
+<info>  [app] Cmdex::execute(): Executing "'smartctl-nc.exe' --scan-open".
+<dump>  [default] EXIT:  "Cmdex::execute()"
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<dump>  [default] ENTER: "Cmdex::unset_stop_timeouts()"
+<dump>  [default] EXIT:  "Cmdex::unset_stop_timeouts()"
+<dump>  [default] EXIT:  "Cmdex::stopped_cleanup()"
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<info>  [app] Starting sequential scan of \\.\PhysicalDriveN devices...
+<dump>  [app] Successfully opened "\\.\PhysicalDrive0".
+<dump>  [app] Drive letters for: pd0: C: (Windows-11).
+<info>  [app] Added drive pd0.
+<dump>  [app] Could not open "\\.\PhysicalDrive1".
+<dump>  [app] Could not open "\\.\PhysicalDrive2".
+<dump>  [app] Could not open "\\.\PhysicalDrive3".
+<dump>  [app] Stopping sequential scan.
+<info>  [app] Checking for additional 3ware devices...
+<info>  [app] 3ware 3DM2 not installed.
+<info>  [app] {anonymous}::detect_drives_win32_areca(): Detecting drives behind Areca controller(s)...
+<info>  [app] No Areca software found. Install Areca CLI or set "system/win32_areca_scan_controllers" config key to 1 to force scanning.
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<info>  [app] Found device: pd0.
+<info>  [app] StorageDetector::detect(): Drive detection finished.
+<info>  [app] Retrieving basic information about the device...
+<info>  [app] get_smartctl_binary(): Smartmontools installation not found in "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\smartmontools\InstallLocation".
+<dump>  [default] ENTER: "Cmdex::execute()"
+<info>  [app] Cmdex::execute(): Executing "'smartctl-nc.exe' --info --health --capabilities 'pd0'".
+<dump>  [default] EXIT:  "Cmdex::execute()"
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<dump>  [default] ENTER: "Cmdex::unset_stop_timeouts()"
+<dump>  [default] EXIT:  "Cmdex::unset_stop_timeouts()"
+<dump>  [default] EXIT:  "Cmdex::stopped_cleanup()"
+<dump>  [app] Device information for pd0 (type: ""):
+<dump>  [app] 	Model: VMware Virtual S
+<dump>  [app] 	Detected type: unknown
+<dump>  [app] 	SMART status: Unsupported
+<dump>  [default] ENTER: "Cmdex::stopped_cleanup()"
+<info>  [app] Entering main loop.
+<dump>  [gtk] Collecting capable appnames: 0ms
+<dump>  [gtk] Allocating hashtables:...... 0ms
+<dump>  [gtk] Reading capable apps:        93ms
+<dump>  [gtk] Reading URL associations:... 0ms
+<dump>  [gtk] Reading extension assocs:    110ms
+<dump>  [gtk] Reading exe-only apps:...... 47ms
+<dump>  [gtk] Reading classes:             515ms
+<dump>  [gtk] Reading UWP apps:            1453ms
+<dump>  [gtk] Postprocessing:..............0ms
+<dump>  [gtk] TOTAL:                       2218ms
+<info>  [app] Saving config before exit...
+<info>  [rconfig] Autosaving config to "C:\Users\sansdfir\AppData\Roaming\gsmartcontrol\gsmartcontrol.conf".
+<warn>  [hz] FS warning: Unable to check if a path "C:\Users\sansdfir\AppData\Roaming\gsmartcontrol\gsmartcontrol.conf" points to directory: No such file or directory.
+<info>  [rmn] Saving: "/config" to file: "C:\Users\sansdfir\AppData\Roaming\gsmartcontrol\gsmartcontrol.conf".
+<info>  [rmn] Serializing: "/config" version: 0.2.1
+<info>  [app] Trying to exit the main loop...
+<info>  [app] Main loop exited.
