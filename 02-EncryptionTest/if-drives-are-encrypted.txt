@@ -1,0 +1,1 @@
+Use FTK-Imager (01-RAM\FTK-Imager) to Capture the Logical Partition(s) of the encypted drive(s)
