@@ -1,0 +1,7 @@
+Use FTK Imager (01-RAM\FTK Imager) (no Admin rights required)
+
+Open Partition Manager on Windows to see all Partitions
+
+If the Partition has a Drive letter -> Use: File -> Create Disk Image -> Logical...
+If there is no Drive Letter -> Use: File -> Add Evidence Item -> Click on the Partition you want to collect -> Right Click -> Export Disk Image
+If you want to collect unallocated Space -> Use: File -> Add Evidence Item -> Click on Unparttitioned Space -> Right Click -> Export Logical Image (AD1)
